@@ -138,10 +138,10 @@
 								print_item_size(find_xml_value($item_xml, 'size'), 'gdl-post-slider-item');
 								print_post_slider_item($item_xml);
 								break;								
-							case 'Price-Item':
+							/* case 'Price-Item':
 								print_item_size(find_xml_value($item_xml, 'size'), 'gdl-price-item');
 								print_price_item($item_xml);
-								break;
+								break; */
 							case 'Portfolio' :
 								print_item_size(find_xml_value($item_xml, 'size'), 'wrapper gdl-portfolio-item mt0');
 								print_portfolio($item_xml);
