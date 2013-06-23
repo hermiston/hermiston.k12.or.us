@@ -1508,26 +1508,18 @@ function wp_upload_dir( $time = null ) {
 
 	if ( empty( $upload_path ) || 'wp-content/uploads' == $upload_path ) {
 		$dir = WP_CONTENT_DIR . '/uploads';
-error_log("Dir 1: $dir");	
 	} elseif ( 0 !== strpos( $upload_path, ABSPATH ) ) {
 		// $dir is absolute, $upload_path is (maybe) relative to ABSPATH
 		$dir = path_join( ABSPATH, $upload_path );
-error_log("Dir 2: $dir");		
 	} else {
 		$dir = $upload_path;
-error_log("Dir 3: $dir");
 	}
 
 	if ( !$url = get_option( 'upload_url_path' ) ) {
 		if ( empty($upload_path) || ( 'wp-content/uploads' == $upload_path ) || ( $upload_path == $dir ) )
-{			$url = WP_CONTENT_URL . '/uploads';
-error_log("URL 1: $url");
-}
+			$url = WP_CONTENT_URL . '/uploads';
 		else
-{
 			$url = trailingslashit( $siteurl ) . $upload_path;
-error_log("URL 2: $url");
-}
 	}
 
 	// Obey the value of UPLOADS. This happens as long as ms-files rewriting is disabled.
@@ -1538,7 +1530,7 @@ error_log("URL 2: $url");
 	}
 
 	// If multisite (and if not the main site in a post-MU network)
-	if ( 1 !== get_current_blog_id() && is_multisite() && ! ( is_main_site() && defined( 'MULTISITE' ) ) ) {
+	if (  is_multisite() && ! ( is_main_site() && defined( 'MULTISITE' ) ) && 1 !== get_current_blog_id() ) {
 
 		if ( ! get_site_option( 'ms_files_rewriting' ) ) {
 			// If ms-files rewriting is disabled (networks created post-3.5), it is fairly straightforward:
