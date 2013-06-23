@@ -823,7 +823,6 @@ function network_latest_posts( $parameters ) {
                     if( $thumbnail_custom != 'true' && $thumbnail_field == NULL ) {
                         // Get the thumbnail
                         $thumb_html = get_the_post_thumbnail($field->ID,$thumbnail_size,array('class' =>$thumbnail_class, 'alt' => $field->post_title, 'title' => $field->post_title));
-                        echo "<pre>$thumb_html</pre>";
                     } else {
                         $thumbnail_custom_field = get_post_meta($field->ID, $thumbnail_field, true);
                         if( !empty( $thumbnail_custom_field ) ) {
