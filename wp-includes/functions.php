@@ -3211,7 +3211,7 @@ function is_main_site( $blog_id = '' ) {
 
 	if ( ! $blog_id )
 		$blog_id = get_current_blog_id();
-
+error_log("Blog ID: $blog_id, Current Site: {$current_site->blog_id}");
 	return $blog_id == $current_site->blog_id;
 }
 
