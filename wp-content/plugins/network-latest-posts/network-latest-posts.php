@@ -569,14 +569,21 @@ function network_latest_posts( $parameters ) {
         // NLPosts title
         if( !empty($title) ) {
             // Open widget title box
-            echo $html_tags['wtitle_o'];
+            //echo $html_tags['wtitle_o'];
             // Print the title
-            echo $title;
+            //echo $title;
             // Close widget title box
-            echo $html_tags['wtitle_c'];
+            //echo $html_tags['wtitle_c'];
+
+            // Modified by Bob Silva
+            echo '<h3 class="blog-header-title title-color mb15 gdl-title">' . $title . '</h3>';
         }
         // Open wrapper
-        echo $html_tags['wrapper_o'];
+        //echo $html_tags['wrapper_o'];
+
+        // Modified by Bob Silva
+        echo '<div id="blog-item-holder" class="blog-item-holder">';
+
         // Paginate results
         if( $paginate && $posts_per_page ) {
             // Page number
@@ -806,15 +813,20 @@ function network_latest_posts( $parameters ) {
             // Print out the posts
             foreach( $all_posts as $field ) {
                 // Open item box
-                $item_o = $html_tags['item_o'];
-                $item_o = str_replace("'>"," nlposts-siteid-".$all_blogkeys[$field->guid]."'>", $item_o);
-                echo $item_o;
+                //$item_o = $html_tags['item_o'];
+                //$item_o = str_replace("'>"," nlposts-siteid-".$all_blogkeys[$field->guid]."'>", $item_o);
+                //echo $item_o;
+                
+                // Modified by Bob Silva
+                echo '<div class="blog-item0 gdl-divider four columns mt0">'; 
+
                 // Thumbnails
                 if( $thumbnail === 'true' ) {
                     // Open thumbnail container
-                    echo $html_tags['thumbnail_o'];
+                    //echo $html_tags['thumbnail_o'];
                     // Open thumbnail item placeholder
-                    echo $html_tags['thumbnail_io'];
+                    //echo $html_tags['thumbnail_io'];
+
                     // Switch to the blog
                     switch_to_blog($all_blogkeys[$field->guid]);
                     // Put the dimensions into an array
@@ -835,8 +847,14 @@ function network_latest_posts( $parameters ) {
                     }
                     // If there is a thumbnail
                     if( !empty($thumb_html) ) {
+                        // Modified by Bob Silva
+                        echo '<div class="blog-thumbnail-image">';
+                        
                         // Display the thumbnail
                         echo "<a href='".$all_permalinks[$field->guid]."'>$thumb_html</a>";
+
+                        // Modified by Bob Silva
+                        echo '</div>';
                     // Thumbnail not found
                     } else {
                         // Put a placeholder with the post title
@@ -869,35 +887,48 @@ function network_latest_posts( $parameters ) {
                     // Back the current blog
                     restore_current_blog();
                     // Open title box
-                    echo $html_tags['title_o'];
+                    //echo $html_tags['title_o'];
+                    
+                    // Modified by Bob Silva
+                    echo '<div class="blog-thumbnail-context">';
+                    echo '<h2 class="blog-thumbnail-title post-widget-title-color gdl-title">';
+
                     // Print the title
                     echo "<a href='".$all_permalinks[$field->guid]."'>".$field->post_title."</a>";
                     // Close the title box
-                    echo $html_tags['title_c'];
+                    //echo $html_tags['title_c'];
+
+                    // Modified by Bob Silva
+                    echo '</h2>';
+
                     if( $full_meta === 'true' ) {
                         // Open meta box
-                        echo $html_tags['meta_o'];
+                        // echo $html_tags['meta_o'];
                         // Set metainfo
-                        $author = get_user_by('id',$field->post_author);
-                        $format = (string)${'date_format_'.$all_blogkeys[$field->guid]};
+                        //$author = get_user_by('id',$field->post_author);
+                        //$format = (string)${'date_format_'.$all_blogkeys[$field->guid]};
                         $datepost = date_i18n($format, strtotime(trim( $field->post_date) ) );
-                        $blog_name = '<a href="'.${'blog_url_'.$all_blogkeys[$field->guid]}.'">'.${'blog_name_'.$all_blogkeys[$field->guid]}."</a>";
+                        
+                        // Modified by Bob Silva
+                        echo '<div class="blog-thumbnail-date post-info-color">' . $datepost . '</div>';
+
+                        //$blog_name = '<a href="'.${'blog_url_'.$all_blogkeys[$field->guid]}.'">'.${'blog_name_'.$all_blogkeys[$field->guid]}."</a>";
                         // The network's root (main blog) is called 'blog',
                         // so we have to set this up because the url ignores the root's subdirectory
-                        if( $all_blogkeys[$field->guid] == 1 ) {
+                        //if( $all_blogkeys[$field->guid] == 1 ) {
                             // Author's page for the main blog
-                            $author_url = ${'blog_url_'.$all_blogkeys[$field->guid]}.'/blog/author/'.$author->user_login;
-                        } else {
+                            //$author_url = ${'blog_url_'.$all_blogkeys[$field->guid]}.'/blog/author/'.$author->user_login;
+                        //} else {
                             // Author's page for other blogs
-                            $author_url = ${'blog_url_'.$all_blogkeys[$field->guid]}.'/author/'.$author->user_login;
-                        }
+                            //$author_url = ${'blog_url_'.$all_blogkeys[$field->guid]}.'/author/'.$author->user_login;
+                        //}
                         // Print metainfo
-                        echo $blog_name . ' - ' . __('Published on','trans-nlp') . ' ' . $datepost . ' ' . __('by','trans-nlp') . ' ' . '<a href="' . $author_url . '">' . $author->display_name . '</a>';
+                        //echo $blog_name . ' - ' . __('Published on','trans-nlp') . ' ' . $datepost . ' ' . __('by','trans-nlp') . ' ' . '<a href="' . $author_url . '">' . $author->display_name . '</a>';
                         // Close meta box
-                        echo $html_tags['meta_c'];
+                        //echo $html_tags['meta_c'];
                     }
                     // Print the content
-                    if( $title_only === 'false' ) {
+                    /* if( $title_only === 'false' ) {
                         // Open excerpt wrapper
                         echo $html_tags['excerpt_o'];
                         // Display excerpts or content
@@ -917,11 +948,14 @@ function network_latest_posts( $parameters ) {
                         }
                         // Close excerpt wrapper
                         echo $html_tags['excerpt_c'];
-                    }
+                    } */
                     // Close thumbnail item placeholder
-                    echo $html_tags['thumbnail_ic'];
+                    //echo $html_tags['thumbnail_ic'];
                     // Close thumbnail container
-                    echo $html_tags['thumbnail_c'];
+                    //echo $html_tags['thumbnail_c'];
+
+                    // Modified by Bob Silva
+                    echo '</div></div>';
                 } else {
                     // Open title box
                     echo $html_tags['title_o'];
@@ -975,12 +1009,19 @@ function network_latest_posts( $parameters ) {
                     }
                 }
                 // Close item box
-                echo $html_tags['item_c'];
+                //echo $html_tags['item_c'];
+
+                // Modified by Bob Silva
+                echo '</div>';
             }
             // Close wrapper
-            echo $html_tags['wrapper_c'];
+            //echo $html_tags['wrapper_c'];
+            
+            
+            echo '<div class="clear"></div>';
+
             // Close content box
-            echo $html_tags['content_c'];
+            //echo $html_tags['content_c'];
         }
     }
     // Reset post data
