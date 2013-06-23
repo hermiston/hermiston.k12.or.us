@@ -1505,7 +1505,7 @@ function win_is_writable( $path ) {
 function wp_upload_dir( $time = null ) {
 	$siteurl = get_option( 'siteurl' );
 	$upload_path = trim( get_option( 'upload_path' ) );
-
+error_log($upload_path);
 	if ( empty( $upload_path ) || 'wp-content/uploads' == $upload_path ) {
 		$dir = WP_CONTENT_DIR . '/uploads';
 	} elseif ( 0 !== strpos( $upload_path, ABSPATH ) ) {
@@ -1539,9 +1539,10 @@ function wp_upload_dir( $time = null ) {
 			// But if a MU-era network has disabled ms-files rewriting manually, they don't need the extra
 			// directory, as they never had wp-content/uploads for the main site.)
 
-			if ( defined( 'MULTISITE' ) )
+			if ( defined( 'MULTISITE' ) ) {
 				$ms_dir = '/sites/' . get_current_blog_id();
-			else
+error_log( 'Blog ID: ' . get_current_blog_id() );
+			} else
 				$ms_dir = '/' . get_current_blog_id();
 
 			$dir .= $ms_dir;
