@@ -1593,7 +1593,7 @@ function wp_upload_dir( $time = null ) {
 			'baseurl' => $baseurl,
 			'error'   => false,
 		) );
-error_log(print_r($uploads, true));
+error_log(print_r($uploads, true)); 
 	// Make sure we have an uploads dir
 	if ( ! wp_mkdir_p( $uploads['path'] ) ) {
 		if ( 0 === strpos( $uploads['basedir'], ABSPATH ) )
