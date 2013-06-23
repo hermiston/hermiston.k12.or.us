@@ -1538,7 +1538,7 @@ error_log("URL 2: $url");
 	}
 
 	// If multisite (and if not the main site in a post-MU network)
-	if ( '1' !== get_current_blog_id() && is_multisite() && ! ( is_main_site() && defined( 'MULTISITE' ) ) ) {
+	if ( 1 !== get_current_blog_id() && is_multisite() && ! ( is_main_site() && defined( 'MULTISITE' ) ) ) {
 
 		if ( ! get_site_option( 'ms_files_rewriting' ) ) {
 			// If ms-files rewriting is disabled (networks created post-3.5), it is fairly straightforward:
