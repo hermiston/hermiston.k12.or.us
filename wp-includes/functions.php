@@ -1530,7 +1530,8 @@ function wp_upload_dir( $time = null ) {
 	}
 
 	// If multisite (and if not the main site in a post-MU network)
-	if (  is_multisite() && ! ( is_main_site() && defined( 'MULTISITE' ) ) ) {
+	// Hack to make this work for root sites
+	if (  !empty($upload_path) && is_multisite() && ! ( is_main_site() && defined( 'MULTISITE' ) ) ) {
 
 		if ( ! get_site_option( 'ms_files_rewriting' ) ) {
 			// If ms-files rewriting is disabled (networks created post-3.5), it is fairly straightforward:
@@ -1539,10 +1540,9 @@ function wp_upload_dir( $time = null ) {
 			// But if a MU-era network has disabled ms-files rewriting manually, they don't need the extra
 			// directory, as they never had wp-content/uploads for the main site.)
 
-			if ( defined( 'MULTISITE' ) ) {
+			if ( defined( 'MULTISITE' ) )
 				$ms_dir = '/sites/' . get_current_blog_id();
-error_log( 'Blog ID: ' . get_current_blog_id() );
-			} else
+			else
 				$ms_dir = '/' . get_current_blog_id();
 
 			$dir .= $ms_dir;
@@ -1594,7 +1594,7 @@ error_log( 'Blog ID: ' . get_current_blog_id() );
 			'baseurl' => $baseurl,
 			'error'   => false,
 		) );
-error_log(print_r($uploads, true)); 
+
 	// Make sure we have an uploads dir
 	if ( ! wp_mkdir_p( $uploads['path'] ) ) {
 		if ( 0 === strpos( $uploads['basedir'], ABSPATH ) )
@@ -3211,7 +3211,7 @@ function is_main_site( $blog_id = '' ) {
 
 	if ( ! $blog_id )
 		$blog_id = get_current_blog_id();
-error_log("Blog ID: $blog_id, Current Site: {$current_site->blog_id}");
+
 	return $blog_id == $current_site->blog_id;
 }
 
