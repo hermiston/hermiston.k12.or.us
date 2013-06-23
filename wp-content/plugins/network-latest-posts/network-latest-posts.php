@@ -845,16 +845,14 @@ function network_latest_posts( $parameters ) {
                             $thumb_html = get_the_post_thumbnail($field->ID,$thumbnail_size,array('class' =>$thumbnail_class, 'alt' => $field->post_title, 'title' => $field->post_title));
                         }
                     }
+
+                    // Modified by Bob Silva
+                        echo '<div class="blog-thumbnail-image">';
+
                     // If there is a thumbnail
                     if( !empty($thumb_html) ) {
-                        // Modified by Bob Silva
-                        echo '<div class="blog-thumbnail-image">';
-                        
                         // Display the thumbnail
                         echo "<a href='".$all_permalinks[$field->guid]."'>$thumb_html</a>";
-
-                        // Modified by Bob Silva
-                        echo '</div>';
                     // Thumbnail not found
                     } else {
                         // Put a placeholder with the post title
@@ -884,6 +882,10 @@ function network_latest_posts( $parameters ) {
                                 break;
                         }
                     }
+
+                    // Modified by Bob Silva
+                    echo '</div>';
+
                     // Back the current blog
                     restore_current_blog();
                     // Open title box
@@ -955,7 +957,7 @@ function network_latest_posts( $parameters ) {
                     //echo $html_tags['thumbnail_c'];
 
                     // Modified by Bob Silva
-                    echo '</div></div>';
+                    echo '</div>';
                 } else {
                     // Open title box
                     echo $html_tags['title_o'];
@@ -1017,11 +1019,12 @@ function network_latest_posts( $parameters ) {
             // Close wrapper
             //echo $html_tags['wrapper_c'];
             
-            
+            // Modified by Bob Silva
+            echo '</div>';
             echo '<div class="clear"></div>';
 
             // Close content box
-            //echo $html_tags['content_c'];
+            echo $html_tags['content_c'];
         }
     }
     // Reset post data
