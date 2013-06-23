@@ -48,7 +48,7 @@
 				$gdl_item_row_size += 3/4; 
 				break;
 			case 'element1-1':
-				echo '<div class="sixteen columns mt10' . $addition_class . '">';
+				echo '<div class="sixteen columns mt10 ' . $addition_class . '">';
 				$gdl_item_row_size += 1; 
 				break;	
 		}
