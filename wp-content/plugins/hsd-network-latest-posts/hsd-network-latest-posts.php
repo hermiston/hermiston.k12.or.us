@@ -230,7 +230,7 @@ function hsd_network_latest_posts( $parameters ) {
     // Parse & merge parameters with the defaults
     $settings = wp_parse_args( $parameters, $defaults );
     
-    error_log(print_r($settings, true));
+    //error_log(print_r($settings, true));
 
     // Paranoid mode activated (yes I'm a security freak)
     foreach ( $settings as $parameter => $value ) {
@@ -298,10 +298,12 @@ function hsd_network_latest_posts( $parameters ) {
     if ( $time_frame > 0 ) {
         // By blog ID
         if ( ! empty( $blog_id ) ) {
-            $blogs = $wpdb->get_col ( "SELECT blog_id FROM $wpdb->blogs WHERE
+            $sql = "SELECT blog_id FROM $wpdb->blogs WHERE
                 public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0' $display
                 AND last_updated >= DATE_SUB(CURRENT_DATE(), INTERVAL $time_frame DAY)
-                ORDER BY last_updated DESC");
+                ORDER BY last_updated DESC";
+            error_log( $sql );
+            $blogs = $wpdb->get_col( $sql );
         }
     // Everything written so far
     } else {
@@ -324,7 +326,7 @@ function hsd_network_latest_posts( $parameters ) {
         // create an array
         $post_ignore = explode( ",", $post_ignore );
     }
-
+    error_log( print_r( $blogs, true ) );
     if ( isset( $blogs ) ) {
         $count_blogs = count( $blogs );
         // Dig into each blog
