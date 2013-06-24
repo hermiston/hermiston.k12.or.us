@@ -1214,6 +1214,9 @@ add_action( 'widgets_init', create_function( '', '
 ' ) );
 
 
+
+
+
 /* Uninstall function
  * Provides uninstall capabilities
  */
