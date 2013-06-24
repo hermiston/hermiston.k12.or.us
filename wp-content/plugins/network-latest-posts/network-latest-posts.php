@@ -1019,6 +1019,7 @@ function network_latest_posts( $parameters ) {
 
                 // Modified by Bob Silva
                 echo '</div>';
+                echo '<div class="clear"></div>';
             }
             // Close wrapper
             //echo $html_tags['wrapper_c'];
@@ -1028,7 +1029,6 @@ function network_latest_posts( $parameters ) {
         }
         // Modified by Bob Silva
         echo '</div></div>'; //class="custom-sidebar gdl-divider recentpost-widget"
-        echo '<div class="clear"></div>';
     }
 
     // Reset post data
