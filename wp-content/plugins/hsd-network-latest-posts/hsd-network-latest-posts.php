@@ -267,7 +267,27 @@ function hsd_network_latest_posts( $parameters ) {
             }
         }
     }
-    error_log( 'DISPLAY: ' . $display );
+    
+    // Ignore blog or blogs
+    // if the user passes one value
+    if( !preg_match("/,/",$ignore_blog) ) {
+        // Always clean this stuff ;)
+        $ignore_blog = (int)htmlspecialchars($ignore_blog);
+        // Check if it's numeric
+        if( is_numeric($ignore_blog) ) {
+            // and put the sql
+            $ignore = " AND blog_id != $ignore_blog ";
+        }
+    // if the user passes more than one value separated by commas
+    } else {
+        // create an array
+        $ignore_arr = explode(",",$ignore_blog);
+        // and repeat the sql for each ID found
+        for( $counter=0; $counter < count($ignore_arr); $counter++){
+            $ignore .= " AND blog_id != ".(int)$ignore_arr[$counter];
+        }
+    }
+
     // If multiple tags found, set an array
     if ( preg_match( "/,/", $tag ) ) {
         $tag = explode( ",", $tag );
@@ -300,10 +320,15 @@ function hsd_network_latest_posts( $parameters ) {
         if ( ! empty( $blog_id ) ) {
             $sql = "SELECT blog_id FROM $wpdb->blogs WHERE
                 public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0' $display
-                AND last_updated >= DATE_SUB(CURRENT_DATE(), INTERVAL $time_frame DAY)
+                $ignore AND last_updated >= DATE_SUB(CURRENT_DATE(), INTERVAL $time_frame DAY)
                 ORDER BY last_updated DESC";
             error_log( $sql );
             $blogs = $wpdb->get_col( $sql );
+        } else {
+            $blogs = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs WHERE
+                public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0'
+                    $ignore AND last_updated >= DATE_SUB(CURRENT_DATE(), INTERVAL $time_frame DAY)
+                        ORDER BY last_updated DESC");
         }
     // Everything written so far
     } else {
@@ -312,9 +337,13 @@ function hsd_network_latest_posts( $parameters ) {
             
             $sql = "SELECT blog_id FROM $wpdb->blogs WHERE
                 public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0' $display
-                ORDER BY last_updated DESC";
+                $ignore ORDER BY last_updated DESC";
             error_log( $sql );
             $blogs = $wpdb->get_col( $sql );
+        } else {
+            $blogs = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs WHERE
+                public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0'
+                    $ignore ORDER BY last_updated DESC");
         }
     }
     // Ignore one or many posts
