@@ -154,11 +154,11 @@ class NLposts_Widget extends WP_Widget {
         // Get the posts
         network_latest_posts($options);
         // Open the aside tag (widget placeholder)
-        $output_string = "<aside class='widget nlposts-widget'>";
+        //$output_string = "<aside class='widget nlposts-widget'>";
         // Grab the content
-        $output_string .= ob_get_contents();
+        $output_string = ob_get_contents();
         // Close the aside tag
-        $output_string .= "</aside>";
+        //$output_string .= "</aside>";
         // Clean the output buffer
         ob_end_clean();
         // Put the content where we want
