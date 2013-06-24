@@ -962,6 +962,7 @@ function network_latest_posts( $parameters ) {
 
                     // Modified by Bob Silva
                     echo '</div>'; //class="recent-post-widget-context"
+                    echo '<div class="clear"></div>';
                 } else {
                     // Open title box
                     echo $html_tags['title_o'];
@@ -1019,7 +1020,6 @@ function network_latest_posts( $parameters ) {
 
                 // Modified by Bob Silva
                 echo '</div>';
-                echo '<div class="clear"></div>';
             }
             // Close wrapper
             //echo $html_tags['wrapper_c'];
