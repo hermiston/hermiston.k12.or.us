@@ -30,7 +30,7 @@ include_once dirname( __FILE__ ) . '/hsd-network-latest-posts.php';
 class HSD_NLposts_Widget extends WP_Widget {
 
     // Default values
-    private $defaults = hsd_network_latest_posts_defaults();
+    private $defaults;
 
     /*array(
         'title'            => NULL,          // Widget title
@@ -79,6 +79,7 @@ class HSD_NLposts_Widget extends WP_Widget {
             'HSD Network Latest Posts', // Name
             array( 'description' => __( 'Network Latest Posts Widget', 'trans-nlp' ), ) // Args
         );
+        $this->defaults = hsd_network_latest_posts_defaults();
     }
 
 
