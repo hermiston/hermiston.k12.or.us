@@ -565,7 +565,11 @@ function network_latest_posts( $parameters ) {
             }
         }
         // Open content box
-        echo $html_tags['content_o'];
+        //echo $html_tags['content_o'];
+        
+        // Modified by Bob Silva
+        echo '<div class="custom-sidebar gdl-divider recentpost-widget">';
+
         // NLPosts title
         if( !empty($title) ) {
             // Open widget title box
@@ -1020,11 +1024,11 @@ function network_latest_posts( $parameters ) {
             //echo $html_tags['wrapper_c'];
             
             // Modified by Bob Silva
-            echo '</div>';
+            echo '</div></div>';
             echo '<div class="clear"></div>';
 
             // Close content box
-            echo $html_tags['content_c'];
+            //echo $html_tags['content_c'];
         }
     }
     // Reset post data
