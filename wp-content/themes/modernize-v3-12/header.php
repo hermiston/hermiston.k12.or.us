@@ -180,7 +180,7 @@
 										
 											echo '<div class="social-icon"><a target="_blank" href="' . $social_link . '">' ;
 											//echo '<img src="' . $social_icon['url'] . '" alt="' . $social_name . '"/>';
-											echo '<i class="' . $social_icon['icon_name'] . ' icon-5x icon-border pull-left icon-red"></i>';
+											echo '<i class="' . $social_icon['icon_name'] . ' icon-2x icon-border pull-left icon-red"></i>';
 											echo '</a></div>';
 										
 										}
