@@ -580,13 +580,13 @@ function network_latest_posts( $parameters ) {
             //echo $html_tags['wtitle_c'];
 
             // Modified by Bob Silva
-            echo '<h3 class="blog-header-title title-color mb15 gdl-title">' . $title . '</h3>';
+            echo '<h3 class="custom-sidebar-title sidebar-title-color gdl-title">' . $title . '</h3>';
         }
         // Open wrapper
         //echo $html_tags['wrapper_o'];
 
         // Modified by Bob Silva
-        echo '<div id="blog-item-holder" class="blog-item-holder">';
+        echo '<div class="gdl-recent-post-widget">';
 
         // Paginate results
         if( $paginate && $posts_per_page ) {
@@ -822,7 +822,7 @@ function network_latest_posts( $parameters ) {
                 //echo $item_o;
                 
                 // Modified by Bob Silva
-                echo '<div class="blog-item0 gdl-divider four columns mt0">'; 
+                echo '<div class="recent-post-widget">'; 
 
                 // Thumbnails
                 if( $thumbnail === 'true' ) {
@@ -851,7 +851,7 @@ function network_latest_posts( $parameters ) {
                     }
 
                     // Modified by Bob Silva
-                        echo '<div class="blog-thumbnail-image">';
+                        echo '<div class="recent-post-widget-thumbnail">';
 
                     // If there is a thumbnail
                     if( !empty($thumb_html) ) {
@@ -896,8 +896,8 @@ function network_latest_posts( $parameters ) {
                     //echo $html_tags['title_o'];
                     
                     // Modified by Bob Silva
-                    echo '<div class="blog-thumbnail-context">';
-                    echo '<h2 class="blog-thumbnail-title post-widget-title-color gdl-title">';
+                    echo '<div class="recent-post-widget-context">';
+                    echo '<div class="recent-post-widget-title gdl-title">';
 
                     // Print the title
                     echo "<a href='".$all_permalinks[$field->guid]."'>".$field->post_title."</a>";
@@ -905,7 +905,7 @@ function network_latest_posts( $parameters ) {
                     //echo $html_tags['title_c'];
 
                     // Modified by Bob Silva
-                    echo '</h2>';
+                    echo '</div>';
 
                     if( $full_meta === 'true' ) {
                         // Open meta box
@@ -916,7 +916,7 @@ function network_latest_posts( $parameters ) {
                         $datepost = date_i18n($format, strtotime(trim( $field->post_date) ) );
                         
                         // Modified by Bob Silva
-                        echo '<div class="blog-thumbnail-date post-info-color">' . $datepost . '</div>';
+                        echo '<div class="recent-post-widget-date post-info-color">' . $datepost . '</div>';
 
                         //$blog_name = '<a href="'.${'blog_url_'.$all_blogkeys[$field->guid]}.'">'.${'blog_name_'.$all_blogkeys[$field->guid]}."</a>";
                         // The network's root (main blog) is called 'blog',
@@ -1025,7 +1025,7 @@ function network_latest_posts( $parameters ) {
             
             // Modified by Bob Silva
             echo '</div></div>';
-            echo '<div class="clear"></div>';
+            //echo '<div class="clear"></div>';
 
             // Close content box
             //echo $html_tags['content_c'];
