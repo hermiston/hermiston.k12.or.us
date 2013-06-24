@@ -310,7 +310,7 @@ function hsd_network_latest_posts( $parameters ) {
             
             $sql = "SELECT blog_id FROM $wpdb->blogs WHERE
                 public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0' $display
-                ORDER BY last_updated DESC");
+                ORDER BY last_updated DESC";
             error_log( $sql );
             $blogs = $wpdb->get_col( $sql );
         }
