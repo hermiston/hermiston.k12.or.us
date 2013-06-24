@@ -134,7 +134,7 @@
 								$logo_attachment = GOODLAYERS_PATH . '/images/default-logo.png';
 								$alt_text = 'default logo';
 							}
-							echo '<img src="' . $logo_attachment . '" alt="' . $alt_text . '"/ >';
+							echo '<img src="' . $logo_attachment . '" alt="' . $alt_text . '" />';
 							echo '</a>';
 						?>
 					</div>
