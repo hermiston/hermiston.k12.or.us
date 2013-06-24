@@ -182,7 +182,7 @@ require_once dirname( __FILE__ ) . '/hsd-network-latest-posts-widget.php';
 
 function hsd_network_latest_posts_defaults() {
     // Default values
-    $defaults = array(
+    return array(
         'title'            => NULL,          // Widget title
         'number_posts'     => 10,            // Number of posts to be displayed
         'time_frame'       => 0,             // Time frame to look for posts in days
@@ -219,8 +219,6 @@ function hsd_network_latest_posts_defaults() {
         'random'           => FALSE,         // Pull random posts (true or false)
         'post_ignore'      => NULL           // Post ID(s) to ignore
     );
-    return $defaults;
-    
 }
 
 
@@ -961,20 +959,17 @@ function hsd_network_latest_posts( $parameters ) {
  * @atts: attributes passed to the main function
  * return @shortcode
  */
-function hsd_network_latest_posts_shortcode($atts) {
-    if( !empty( $atts ) ) {
-        extract( $atts );
-    }
+function hsd_network_latest_posts_shortcode( $atts ) {
     // Start the output buffer to control the display position
     ob_start();
     // Get the posts
-    hsd_network_latest_posts($atts);
+    hsd_network_latest_posts( $atts );
     // Output the content
-    $output = ob_get_contents();
+    $output_string = ob_get_contents();
     // Clean the output buffer
     ob_end_clean();
     // Put the content where we want
-    return $output;
+    return $output_string;
 }
 
 // Add the shortcode functionality
@@ -1152,12 +1147,12 @@ function hsd_network_latest_posts_init() {
     global $wp_locale;
     
     // Check for the required API functions
-    if ( !function_exists('register_sidebar_widget') || !function_exists('register_widget_control') )
+    if ( ! function_exists( 'register_sidebar_widget' ) || ! function_exists( 'register_widget_control' ) )
         return;
     
     // Register functions
-    wp_register_sidebar_widget( 'hsd-nlposts-sb-widget', __( 'Network Latest Posts', 'trans-nlp' ), 'hsd_network_latest_posts_widget' );
-    wp_register_widget_control( 'hsd-nlposts-control', __( 'Network Latest Posts', 'trans-nlp' ), 'hsd_network_latest_posts_control' );
+    wp_register_sidebar_widget( 'hsd-nlposts-sb-widget', __( 'HSD Network Latest Posts', 'trans-nlp' ), 'hsd_network_latest_posts_widget' );
+    wp_register_widget_control( 'hsd-nlposts-control', __( 'HSD Network Latest Posts', 'trans-nlp' ), 'hsd_network_latest_posts_control' );
     wp_register_style( 'hsd-nlpcss-form', plugins_url( '/css/form_style.css', __FILE__ ) );
     wp_enqueue_style( 'hsd-nlpcss-form' );
     register_uninstall_hook( __FILE__, 'hsd_network_latest_posts_uninstall' );
@@ -1254,7 +1249,7 @@ function hsd_nlp_shortcode_plugin( $plugin_array ) {
 // Hook the shortcode button into TinyMCE
 add_action( 'init', 'hsd_nlp_shortcode_button' );
 // Load styles
-add_action( 'wp_head', 'nlp_load_styles', 10, 1 );
+add_action( 'wp_head', 'hsd_nlp_load_styles', 10, 1 );
 // Run this stuff
 add_action( 'admin_enqueue_scripts', 'hsd_network_latest_posts_init' );
 // Languages

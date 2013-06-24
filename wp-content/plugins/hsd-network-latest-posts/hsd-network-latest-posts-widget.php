@@ -77,7 +77,7 @@ class HSD_NLposts_Widget extends WP_Widget {
         parent::__construct(
             'hsd_nlposts_widget', // Base ID
             'HSD Network Latest Posts', // Name
-            array( 'description' => __( 'Network Latest Posts Widget', 'trans-nlp' ), ) // Args
+            array( 'description' => __( 'HSD Network Latest Posts Widget', 'trans-nlp' ), ) // Args
         );
         $this->defaults = hsd_network_latest_posts_defaults();
     }
