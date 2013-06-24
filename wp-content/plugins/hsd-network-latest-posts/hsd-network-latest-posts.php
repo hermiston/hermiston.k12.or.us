@@ -1215,7 +1215,7 @@ add_action( 'widgets_init', create_function( '', '
         $wp_styles->text_direction = "rtl";
     }
     // Load the class
-    return register_widget( 'HSD_NLposts_Widget' );
+    return register_widget( "HSD_NLposts_Widget" );
 ' ) );
 
 
