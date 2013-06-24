@@ -961,7 +961,7 @@ function network_latest_posts( $parameters ) {
                     //echo $html_tags['thumbnail_c'];
 
                     // Modified by Bob Silva
-                    echo '</div>';
+                    echo '</div>'; //class="recent-post-widget-context"
                 } else {
                     // Open title box
                     echo $html_tags['title_o'];
@@ -1022,15 +1022,15 @@ function network_latest_posts( $parameters ) {
             }
             // Close wrapper
             //echo $html_tags['wrapper_c'];
-            
-            // Modified by Bob Silva
-            echo '</div></div>';
-            //echo '<div class="clear"></div>';
 
             // Close content box
             //echo $html_tags['content_c'];
         }
+        // Modified by Bob Silva
+        echo '</div></div>'; //class="custom-sidebar gdl-divider recentpost-widget"
+        echo '<div class="clear"></div>';
     }
+
     // Reset post data
     wp_reset_postdata();
 }
