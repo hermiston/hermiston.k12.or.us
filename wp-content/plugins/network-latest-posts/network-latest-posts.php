@@ -912,7 +912,7 @@ function network_latest_posts( $parameters ) {
                         // echo $html_tags['meta_o'];
                         // Set metainfo
                         //$author = get_user_by('id',$field->post_author);
-                        //$format = (string)${'date_format_'.$all_blogkeys[$field->guid]};
+                        $format = (string)${'date_format_'.$all_blogkeys[$field->guid]};
                         $datepost = date_i18n($format, strtotime(trim( $field->post_date) ) );
                         
                         // Modified by Bob Silva
