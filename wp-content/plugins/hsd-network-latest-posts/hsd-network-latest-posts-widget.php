@@ -158,6 +158,7 @@ class HSD_NLposts_Widget extends WP_Widget {
         hsd_network_latest_posts( $options );
         // Grab the content
         $output_string = ob_get_contents();
+        error_log('OUTPUT: ' . $output_string);
         // Clean the output buffer
         ob_end_clean();
         // Put the content where we want

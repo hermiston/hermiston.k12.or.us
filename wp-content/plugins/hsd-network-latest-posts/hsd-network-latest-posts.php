@@ -226,10 +226,12 @@ function hsd_network_latest_posts( $parameters ) {
     global $wpdb;
     
     $defaults = hsd_network_latest_posts_defaults();
-    
+
     // Parse & merge parameters with the defaults
     $settings = wp_parse_args( $parameters, $defaults );
     
+    error_log(print_r($settings, true));
+
     // Paranoid mode activated (yes I'm a security freak)
     foreach ( $settings as $parameter => $value ) {
         // Strip everything
@@ -305,9 +307,12 @@ function hsd_network_latest_posts( $parameters ) {
     } else {
         // By blog ID
         if ( ! empty( $blog_id ) ) {
-            $blogs = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs WHERE
+            
+            $sql = "SELECT blog_id FROM $wpdb->blogs WHERE
                 public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0' $display
                 ORDER BY last_updated DESC");
+            error_log( $sql );
+            $blogs = $wpdb->get_col( $sql );
         }
     }
     // Ignore one or many posts
