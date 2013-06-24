@@ -267,7 +267,7 @@ function hsd_network_latest_posts( $parameters ) {
             }
         }
     }
-    
+    error_log( 'DISPLAY: ' . $display );
     // If multiple tags found, set an array
     if ( preg_match( "/,/", $tag ) ) {
         $tag = explode( ",", $tag );
@@ -326,6 +326,7 @@ function hsd_network_latest_posts( $parameters ) {
         // create an array
         $post_ignore = explode( ",", $post_ignore );
     }
+    error_log( 'BLOGS: ' );
     error_log( print_r( $blogs, true ) );
     if ( isset( $blogs ) ) {
         $count_blogs = count( $blogs );
