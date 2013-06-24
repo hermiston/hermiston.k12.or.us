@@ -230,8 +230,6 @@ function hsd_network_latest_posts( $parameters ) {
     // Parse & merge parameters with the defaults
     $settings = wp_parse_args( $parameters, $defaults );
     
-    //error_log(print_r($settings, true));
-
     // Paranoid mode activated (yes I'm a security freak)
     foreach ( $settings as $parameter => $value ) {
         // Strip everything
@@ -322,14 +320,12 @@ function hsd_network_latest_posts( $parameters ) {
                 public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0' $display
                 $ignore AND last_updated >= DATE_SUB(CURRENT_DATE(), INTERVAL $time_frame DAY)
                 ORDER BY last_updated DESC";
-            error_log( 'SQL 1: ' . $sql );
             $blogs = $wpdb->get_col( $sql );
         } else {
             $sql = "SELECT blog_id FROM $wpdb->blogs WHERE
                 public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0'
                     $ignore AND last_updated >= DATE_SUB(CURRENT_DATE(), INTERVAL $time_frame DAY)
                         ORDER BY last_updated DESC";
-            error_log( 'SQL 2: ' . $sql );
             $blogs = $wpdb->get_col( $sql );
         }
     // Everything written so far
@@ -340,13 +336,11 @@ function hsd_network_latest_posts( $parameters ) {
             $sql = "SELECT blog_id FROM $wpdb->blogs WHERE
                 public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0' $display
                 $ignore ORDER BY last_updated DESC";
-            error_log( 'SQL 3: ' . $sql );
             $blogs = $wpdb->get_col( $sql );
         } else {
             $sql = "SELECT blog_id FROM $wpdb->blogs WHERE
                 public = '1' AND archived = '0' AND mature = '0' AND spam = '0' AND deleted = '0'
                     $ignore ORDER BY last_updated DESC";
-            error_log( 'SQL 4: ' . $sql );
             $blogs = $wpdb->get_col( $sql );
         }
     }
@@ -359,8 +353,7 @@ function hsd_network_latest_posts( $parameters ) {
         // create an array
         $post_ignore = explode( ",", $post_ignore );
     }
-    error_log( 'BLOGS: ' );
-    error_log( print_r( $blogs, true ) );
+
     if ( isset( $blogs ) ) {
         $count_blogs = count( $blogs );
         // Dig into each blog
