@@ -12,6 +12,11 @@ class pop_qqUploadedFileXhr {
     function save($path) {    
         $input = fopen("php://input", "r");
         $temp = tmpfile();
+		if(false===$temp){
+			$upload_dir = wp_upload_dir();
+			$filename = tempnam($upload_dir['path'],'tmp_uload')."<br >";
+			$temp = fopen($filename,'w+');		
+		}
 		$metaDatas = stream_get_meta_data($temp);
 		$tmpFilename = $metaDatas['uri'];		
         $realSize = stream_copy_to_stream($input, $temp);
@@ -24,14 +29,17 @@ class pop_qqUploadedFileXhr {
 		$wp_filetype = wp_check_filetype_and_ext( $tmpFilename, $this->getName(), false );
 		//extract( $wp_filetype );		
 		if(false!==$wp_filetype['proper_filename']){
+			fclose($temp);
 			return false;
 		}
 		if ( ( !$wp_filetype['type'] || !$wp_filetype['ext'] ) && !current_user_can( 'unfiltered_upload' ) ){
 			$this->error = __( 'Sorry, this file type is not permitted for security reasons.' );
+			fclose($temp);
 			return false;
 		}
 		if( !in_array($wp_filetype['type'],$allowed_mime_types) ){
 			$this->error = __( 'Sorry, this file type is not permitted for security reasons.' );
+			fclose($temp);
 			return false;
 		}
 		
@@ -41,19 +49,22 @@ class pop_qqUploadedFileXhr {
 			finfo_close($finfo);
 			if( false!==$mime_type && !in_array($mime_type,$allowed_mime_types) ){
 				$this->error = __( 'Sorry, this file type is not permitted for security reasons.' );
+				fclose($temp);
 				return false;
 			}					
 		}else if(function_exists('mime_content_type')){
 			$mime_type = mime_content_type($tmpFilename);
 			if( false!==$mime_type && !in_array($mime_type,$allowed_mime_types) ){
 				$this->error = __( 'Sorry, this file type is not permitted for security reasons.' );
+				fclose($temp);
 				return false;
 			}								
 		}
 		
 		//-----
 		
-        if ($realSize != $this->getSize()){            
+        if ($realSize != $this->getSize()){   
+			fclose($temp);         
             return false;
         }
         
@@ -61,7 +72,7 @@ class pop_qqUploadedFileXhr {
         fseek($temp, 0, SEEK_SET);
         stream_copy_to_stream($temp, $target);
         fclose($target);
-        
+        fclose($temp);
         return true;
     }
     function getName() {

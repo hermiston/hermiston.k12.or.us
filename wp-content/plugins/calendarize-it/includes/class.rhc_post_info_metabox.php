@@ -40,7 +40,12 @@ class rhc_post_info_metabox {
 				if (current_user_can($this->capability, $post_ID)){
 					global $rhc_plugin;
 					$postinfo_boxes		= $rhc_plugin->get_option('postinfo_boxes',false,true);
-					if(false!==$postinfo_boxes){
+					if(false!==$postinfo_boxes){	
+						foreach($postinfo_boxes as $id => $o){
+							foreach($o->data as $data_id => $data_o){
+								$postinfo_boxes[$id]->data[$data_id]->post_ID = $post_ID;
+							}
+						}					
 						update_post_meta($post_ID,'postinfo_boxes',$postinfo_boxes);					
 					}
 				}			
@@ -130,7 +135,7 @@ class rhc_post_info_metabox {
 		$metafields = $this->get_meta_fields($post);
 		$taxonomies_meta_fields = $this->get_taxonomies_meta_fields($taxonomies);
 		
-		$postinfo_boxes_id = property_exists($o,postinfo_boxes_id)?$o->postinfo_boxes_id:'detailbox';
+		$postinfo_boxes_id = property_exists($o,'postinfo_boxes_id')?$o->postinfo_boxes_id:'detailbox';
 		$postinfo_boxes = rhc_post_info_shortcode::get_post_extra_info($post->ID,$postinfo_boxes_id);
 		$extra_info_size = $postinfo_boxes->span;
 		$extra_info_columns = $postinfo_boxes->columns;

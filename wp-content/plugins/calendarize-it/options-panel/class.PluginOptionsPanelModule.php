@@ -11,12 +11,13 @@ if(!class_exists('PluginOptionsPanelModule')):
 class PluginOptionsPanelModule {
 	var $id;
 	var $capability;
+	var $capability_license;
 	var $page_title;
 	var $menu_text;
 	var $option_menu_parent;
 	var $notification;
 	var $description_rowspan=0;
-	var $version = '2.3.0';
+	var $version = '2.3.2';
 	var $rangeinput;
 	var $colorpicker;
 	var $registration = true;
@@ -31,6 +32,7 @@ class PluginOptionsPanelModule {
 			'tdom'					=> 'pop',
 			'section'				=> null,
 			'capability'			=> 'manage_pop',
+			'capability_license'	=> 'manage_options',
 			'options_varname'		=> 'pop_options',
 			'menu_id'				=> 'pop-options',
 			'page_title'			=> __('Plugin Options Panel','pop'),
@@ -85,9 +87,9 @@ class PluginOptionsPanelModule {
 			if(!class_exists('pop_bundles')) require_once 'class.pop_bundles.php';
 			new pop_bundles(array('plugin_id'=>$this->id,'open'=>false,'tdom'=>'pop','plugin_code'=>$this->notification->plugin_code,'options_varname'=>$this->options_varname));
 		}
-		if($this->registration){
+		if($this->registration && current_user_can($this->capability_license)){
 			if(!class_exists('pop_plugin_registration')) require_once 'class.plugin_registration.php';
-			new pop_plugin_registration(array('plugin_id'=>$this->id,'open'=>false,'tdom'=>'pop','plugin_code'=>$this->notification->plugin_code,'options_varname'=>$this->options_varname));
+			new pop_plugin_registration(array('capability'=>$this->capability_license, 'plugin_id'=>$this->id,'open'=>false,'tdom'=>'pop','plugin_code'=>$this->notification->plugin_code,'options_varname'=>$this->options_varname));
 		}
 
 		if($this->import_export){

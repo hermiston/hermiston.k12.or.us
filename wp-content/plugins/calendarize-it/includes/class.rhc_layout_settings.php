@@ -156,6 +156,22 @@ class rhc_layout_settings {
 				'save_option'=>true,
 				'load_option'=>true
 			),		
+			(object)array('type'	=> 'clear'),	
+			(object)array(
+				'type' 			=> 'subtitle',
+				'label'			=> __('Google map','rhc')
+			),				
+			(object)array(
+				'id'		=> 'gmap3_scrollwheel',
+				'label'		=> __('Enable mouse wheel google map zoom ','rhc'),
+				'description'=> __('If disabled, the user can still zoom in or out using the zoom control buttons.','rhc'),
+				'type'		=> 'yesno',
+				'default'	=> '1',
+				'el_properties'	=> array(),
+				'save_option'=>true,
+				'load_option'=>true
+			),	
+			(object)array('type'	=> 'clear'),	
 			(object)array(
 				'type' 			=> 'subtitle',
 				'label'			=> __('HTML wrapper','rhc')
@@ -417,13 +433,13 @@ class rhc_layout_settings {
 				'description'	=> sprintf('<p>%s</p><p>%s</p><p><b>%s</b> %s</p><p><b>%s</b> %s</p><p><b>%s</b> %s</p><p><b>%s</b> %s</p>',
 					__('Only use this options if you want to use diferent labels from the localized ones, or if the plugin is not providing localization at all.','rhc'),
 					__('Write <b>comma separated</b> and <b>no space</b> labels on each setting in this section','rhc'),
-					__('Default month names:'),
+					__('Default month names:','rhc'),
 					__('January, February, March, April, May, June, July, August, September, October, November, December','rhc'),
-					__('Default short month names:'),
+					__('Default short month names:','rhc'),
 					__('Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec','rhc'),
-					__('Default day names:'),
+					__('Default day names:','rhc'),
 					__('Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday','rhc'),
-					__('Default short day names:'),
+					__('Default short day names:','rhc'),
 					__('Sun, Mon, Tue, Wed, Thu, Fri, Sat','rhc')
 				)
 			),	
@@ -653,7 +669,7 @@ class rhc_layout_settings {
 					__('<b>Reverse order:</b>  choose yes to invert the order of events','rhc'),
 					__('<b>Months ahead:</b>  By default the events view show up to one month of upcoming events.  Use this option to show more events.','rhc'),
 					__('<b>Max displayed events:</b>  Optionally limit the number of events displayed.','rhc'),
-					__('<b>Show multi month events:</b> By default long spanning events that started on a diferent month will not be displayed in the event list.  Check yes to show them.')
+					__('<b>Show multi month events:</b> By default long spanning events that started on a diferent month will not be displayed in the event list.  Check yes to show them.','rhc')
 				)				
 			),
 			(object)array(

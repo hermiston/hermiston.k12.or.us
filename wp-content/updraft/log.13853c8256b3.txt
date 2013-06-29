@@ -1,0 +1,7 @@
+0000.000 () Opened log file at time: Mon, 24 Jun 2013 18:17:59 +0000
+0000.003 () UpdraftPlus: 1.6.17 WP: 3.5.2 PHP: 5.3.10-1ubuntu3.6 (Linux HSD-AS-01 3.2.0-29-generic #46-Ubuntu SMP Fri Jul 27 17:03:23 UTC 2012 x86_64) Server: Apache/2.2.22 (Ubuntu) max_execution_time: 900 memory_limit: 256M ZipArchive::addFile : Y
+0000.005 () Free space on disk containing Updraft's temporary directory: 2670473 Mb
+0000.008 () Tasks: Backup files:  (schedule: daily) Backup DB: 1 (schedule: daily)
+0000.010 () Processed schedules. Tasks now: Backup files:  Backup DB: 
+0000.012 () No email will be sent - this backup set was empty.
+0000.014 () The backup apparently succeeded and is now complete

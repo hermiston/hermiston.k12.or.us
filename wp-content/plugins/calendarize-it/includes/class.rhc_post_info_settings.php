@@ -89,7 +89,7 @@ class rhc_post_info_settings {
 				'label'			=> __('Restore custom fields','rhc'),
 				'description'	=> sprintf('<p>%s</p><p>%s</p>',
 					__('If you have overwritten the default custom fields, use this button to restore the original set.','rhc'),
-					__('Observe that the default set is only used when creating new events.  Existing events will keep their current custom field layout.')
+					__('Observe that the default set is only used when creating new events.  Existing events will keep their current custom field layout.','rhc')
 				)
 			),			
 			(object)array(

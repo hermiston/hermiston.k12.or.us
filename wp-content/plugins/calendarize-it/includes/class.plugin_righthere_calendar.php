@@ -9,6 +9,7 @@ class plugin_righthere_calendar {
 	var $calendar_ajax;
 	var $uid=0;
 	var $debug_menu = false;
+	var $in_footer = false;
 	function plugin_righthere_calendar($args=array()){
 		//------------
 		$defaults = array(
@@ -18,8 +19,9 @@ class plugin_righthere_calendar {
 			'options_varname'	=> 'rhc_options',
 			'options_parameters'=> array(),
 			'options_capability'=> 'manage_options',
+			'license_capability'=> 'manage_options',
 			'resources_path'	=> 'calendarize-it',
-			'options_panel_version'	=> '2.3.1',
+			'options_panel_version'	=> '2.3.2',
 			'post_info_shortcode'=> 'post_info',
 			'debug_menu'		=> false,
 			'autoupdate'		=> true
@@ -52,6 +54,10 @@ class plugin_righthere_calendar {
 		}
 		//--
 		add_action('plugins_loaded',array(&$this,'handle_addons_load'),5);
+//--
+		if('1'==$this->get_option('in_footer',false,true)){
+			$this->in_footer = true;
+		}		
 	}
 	
 	function handle_addons_load(){
@@ -106,27 +112,28 @@ class plugin_righthere_calendar {
 		wp_register_script( 'rhc-jquery-ui-1-8-22', RHC_URL.'js/jquery-ui-1.8.22.custom.min.js', array('jquery'),'1.8.22');
 		
 		wp_enqueue_style( 'fullcalendar-theme', RHC_URL.'ui-themes/default/style.css', array(),'1.8.17');
-		wp_enqueue_style( 'calendarize', RHC_URL.'style.css', array(),'2.0.0.2');
-		wp_register_script( 'jquery-easing', RHC_URL.'js/jquery.easing.1.3.js', array('jquery'),'1.3.0');
-		wp_register_script( 'rrecur-parser', RHC_URL.'js/rrecur-parser.js', array('jquery'),'1.1.0.2');	
-		wp_register_script( 'fullcalendar', RHC_URL.'fullcalendar/fullcalendar/fullcalendar.custom.js', array('jquery','rrecur-parser'),'1.6.1.1');	
-		wp_register_script( 'fechahora', RHC_URL.'js/fechahora.js', array('jquery'),'1.0.0');
-		wp_register_script( 'fc_dateformat_helper', RHC_URL.'js/fc_dateformat_helper.js', array('fullcalendar'),'1.0.0');
-		wp_register_script( 'calendarize-fcviews', RHC_URL.'js/fullcalendar_custom_views.js', array(),'1.1.3.5');	
+		wp_enqueue_style( 'calendarize', RHC_URL.'style.css', array(),'2.0.0.4');
+		wp_register_script( 'jquery-easing', RHC_URL.'js/jquery.easing.1.3.js', array('jquery'),'1.3.0',$this->in_footer);
+		wp_register_script( 'rrecur-parser', RHC_URL.'js/rrecur-parser.js', array('jquery'),'1.1.0.2',$this->in_footer);	
+		wp_register_script( 'fullcalendar-gcal', RHC_URL.'fullcalendar/fullcalendar/gcal.js', array('fullcalendar'),'1.6.1.1',$this->in_footer);	
+		wp_register_script( 'fullcalendar', RHC_URL.'fullcalendar/fullcalendar/fullcalendar.custom.js', array('jquery','rrecur-parser'),'1.6.1.1',$this->in_footer);	
+		wp_register_script( 'fechahora', RHC_URL.'js/fechahora.js', array('jquery'),'1.0.0',$this->in_footer);
+		wp_register_script( 'fc_dateformat_helper', RHC_URL.'js/fc_dateformat_helper.js', array('fullcalendar'),'1.0.0',$this->in_footer);
+		wp_register_script( 'calendarize-fcviews', RHC_URL.'js/fullcalendar_custom_views.js', array(),'1.1.3.5',$this->in_footer);	
 		//-------
-		$dependency = array('jquery','fullcalendar','jquery-easing','calendarize-fcviews');
+		$dependency = array('jquery','fullcalendar','jquery-easing','calendarize-fcviews','fullcalendar-gcal');
 		if('none'!=$jquery_ui){
 			$dependency[]=$jquery_ui;
 		}
-		wp_register_script( 'calendarize', RHC_URL.'js/calendarize.js', $dependency,'1.1.3.5');
+		wp_register_script( 'calendarize', RHC_URL.'js/calendarize.js', $dependency,'2.0.0.4',$this->in_footer);
 		//-------
-		wp_enqueue_script( 'rhc-upcoming-widget', RHC_URL.'js/widget_upcoming_events.js', array('jquery','fullcalendar'),'1.1.0.6');	
+		wp_register_script( 'rhc-upcoming-widget', RHC_URL.'js/widget_upcoming_events.js', array('jquery','fullcalendar'),'1.1.0.7',$this->in_footer);	
 		
-		wp_register_script( 'google-api3', 'http://maps.google.com/maps/api/js?sensor=false&libraries=places', array('jquery'),'3.0');
-		wp_register_script( 'rhc_gmap3', RHC_URL.'js/rhc_gmap3.js', array('google-api3'), '1.0.1' );
+		wp_register_script( 'google-api3', 'http://maps.google.com/maps/api/js?sensor=false&libraries=places', array('jquery'),'3.0',$this->in_footer);
+		wp_register_script( 'rhc_gmap3', RHC_URL.'js/rhc_gmap3.js', array('google-api3'), '1.0.1',$this->in_footer );
 		
 		if('1'==$this->get_option('visibility_check','0',true)){
-			wp_enqueue_script( 'rhc-visibility-check', RHC_URL.'js/visibility_check.js', array(),'1.0.0');
+			wp_enqueue_script( 'rhc-visibility-check', RHC_URL.'js/visibility_check.js', array('jquery'),'1.0.0',$this->in_footer);
 		}
 		
 		if('0'==$this->get_option('disable_print_css','0',true)){
@@ -149,11 +156,10 @@ class plugin_righthere_calendar {
 			//wp_register_script( 'calendarize-metabox', RHC_URL.'js/calendarize_metabox.js', array('jquery'),'1.0.1');			
 			wp_register_script( 'calendarize-metabox', RHC_URL.'js/calendarize_metabox_rrule.js', array('jquery'),'1.2.6.1');				
 			wp_register_script( 'postinfo-metabox', RHC_URL.'js/post_info_metabox.js', array('jquery'),'1.2.6.1');	
+		}else{
+			wp_enqueue_script('rhc-upcoming-widget');
+			wp_enqueue_script('calendarize');
 		}
-		//--
-		//wp_enqueue_style('fullcalendar');
-		wp_enqueue_script('calendarize');
-		//wp_enqueue_style('calendarize');
 	}
 	
 	function plugins_loaded(){
@@ -214,6 +220,7 @@ class plugin_righthere_calendar {
 			new rhc_tax_settings($this->id);		
 			
 			$license_keys = $this->get_option('license_keys',array());
+			$license_keys = is_array($license_keys)?$license_keys:array();
 			
 			$dc_options = array(
 				'id'			=> $this->id.'-dc',
@@ -223,7 +230,8 @@ class plugin_righthere_calendar {
 				'parent_id'		=> 'edit.php?post_type='.RHC_EVENTS,
 				'menu_text'		=> __('Downloads','rhc'),
 				'page_title'	=> __('Downloadable content - Calendarize it! for WordPress','rhc'),
-				'license_keys'	=> $this->get_option('license_keys',array()),
+				'license_keys'	=> $license_keys,
+				'plugin_code'	=> $this->plugin_code,
 				//'api_url'		=> 'http://dev.lawley.com/',
 				'product_name'	=> __('Calendarize-it','rhc'),
 				'options_varname' => $this->options_varname,
@@ -245,6 +253,7 @@ class plugin_righthere_calendar {
 				'id'					=> $this->id,
 				'plugin_id'				=> $this->id,
 				'capability'			=> $this->options_capability,
+				'capability_license'	=> $this->license_capability,
 				'options_varname'		=> $this->options_varname,
 				'menu_id'				=> 'rhc-options',
 				'page_title'			=> __('Options','rhc'),
@@ -254,7 +263,7 @@ class plugin_righthere_calendar {
 				'notification'			=> (object)array(
 					'plugin_version'=> RHC_VERSION,
 					'plugin_code' 	=> 'RHC',
-					'message'		=> __('Calendar plugin update %s is available! <a href="%s">Please update now</a>','rch')
+					'message'		=> __('Calendar plugin update %s is available! <a href="%s">Please update now</a>','rhc')
 				),
 				'ad_options'			=> $ad_options,
 				//'addons'				=> is_array($license_keys)&&count($license_keys)>0?true:false,
@@ -351,7 +360,7 @@ class plugin_righthere_calendar {
 					'FREQ=WEEKLY;INTERVAL=1'	=> __('Every week','rhc'),
 					'FREQ=WEEKLY;INTERVAL=2'	=> __('Every 2 weeks','rhc'),
 					'FREQ=MONTHLY;INTERVAL=1'	=> __('Every month','rhc'),
-					'FREQ=YEARLY;INTERVAL=1'	=> __('Every year')
+					'FREQ=YEARLY;INTERVAL=1'	=> __('Every year','rhc')
 				));
 	}
 	

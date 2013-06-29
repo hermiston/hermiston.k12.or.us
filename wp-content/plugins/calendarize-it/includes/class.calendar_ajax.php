@@ -18,7 +18,7 @@ class calendar_ajax {
 					'1 WEEK'	=> __('Every week','rhc'),
 					'2 WEEK'	=> __('Every 2 weeks','rhc'),
 					'1 MONTH'	=> __('Every month','rhc'),
-					'1 YEAR'	=> __('Every year')
+					'1 YEAR'	=> __('Every year','rhc')
 				);		
 	}
 	
@@ -182,9 +182,12 @@ class calendar_ajax {
 			header("Cache-Control: public");
 			header("Content-Description: File Transfer");
 			header("Content-Length: ". strlen($output) .";");
+			header('Content-Type: text/calendar; charset=utf-8');//change mainly for google.
 			header("Content-Disposition: attachment; filename=$filename");
-			header("Content-Type: application/octet-stream; "); 
-			header("Content-Transfer-Encoding: binary");
+			//header("Content-Type: application/octet-stream; "); 
+			header("Content-Transfer-Encoding: binary");		
+		}else{
+			header('Content-Type: text/html; charset=utf-8');
 		}
 		die( $output );
 	}
@@ -216,9 +219,9 @@ class calendar_ajax {
 		
 		foreach($post_fields as $field => $default){
 			if($field=='start'){
-				$value = isset($_REQUEST[$field])?date('Y-m-d 00:00:00',$_REQUEST['start']):$default;
+				$value = isset($_REQUEST[$field])? date('Y-m-d 00:00:00', intval($_REQUEST['start'])):$default;
 			}else if($field=='end'){
-				$value = isset($_REQUEST[$field])?date('Y-m-d 23:59:59',$_REQUEST['end']):$default;			
+				$value = isset($_REQUEST[$field])? date('Y-m-d 23:59:59', intval($_REQUEST['end'])):$default;			
 			}else{
 				$value = isset($_REQUEST[$field])?$_REQUEST[$field]:$default;
 			}

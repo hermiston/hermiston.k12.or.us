@@ -162,7 +162,7 @@ function render_upcoming_events(options,events,date_options){
 				});
 				//--//rhc-featured-date 
 				var done_day = $.fullCalendar.formatDate(e.start,'yyyyMMdd',date_options);
-				if( -1==done_days.indexOf(done_day) ){
+				if( -1==$.inArray(done_day,done_days) ){
 					done_days.push(done_day);
 				}else{
 					str.find('.hide-repeat-date').addClass('repeated-date');

@@ -77,7 +77,7 @@ class rhc_template_frontend {
 	}
 	
 	function single_template($template){	
-		global $wp_query;
+		global $wp_query,$wp_the_query;
 		$o = get_queried_object();
 	
 		if($o->post_type==RHC_EVENTS){
@@ -98,7 +98,16 @@ class rhc_template_frontend {
 					$values[$field] = $o->$field;
 				}			
 			
+				global $wp_filter;	
+				if(isset($wp_filter['pre_get_posts'])){
+					$bak = $wp_filter['pre_get_posts'];
+					unset($wp_filter['pre_get_posts']);				
+				}else{
+					$bak = false;
+				}			
+			
 				$wp_query = new WP_Query('page_id='.$template_page_id);
+			
 				$o = $wp_query->get_queried_object();	
 				$wrap = $o->post_content;			
 				//----- without this, template selection does not gets correctly done, always default.
@@ -108,11 +117,17 @@ class rhc_template_frontend {
 				$post->post_status = 'publish';//force it as publish 
 				//------------			
 				$template = get_page_template();//fetch template before overwritting post.
+
+				if(false!==$bak){
+					$wp_filter['pre_get_posts'] = $bak;
+				}
 				
 				foreach( $copy_fields as $field){
 					$post->$field = $values[$field];
 				}
-				$post->post_content = $this->single_template_content($o->post_content,$wrap);				
+				$post->post_content = $this->single_template_content($o->post_content,$wrap);		
+				$wp_query->post = $post;		
+				$wp_the_query = $wp_query;	
 			}else{
 				global $wp_query;
 				//-- this is to much hacking.  TODO, find an alternative.
@@ -147,7 +162,7 @@ class rhc_template_frontend {
 	}
 		
 	function taxonomy_template($template){	
-		global $wp_query;
+		global $wp_query,$wp_the_query;
 
 		$cat = $wp_query->get_queried_object();
 		$term_id 	= $cat->term_id;
@@ -156,6 +171,14 @@ class rhc_template_frontend {
 
 		$template_page_id = $this->get_taxonomy_template_page_id($term_id,$taxonomy);
 		if($template_page_id){
+			global $wp_filter;	
+			if(isset($wp_filter['pre_get_posts'])){
+				$bak = $wp_filter['pre_get_posts'];
+				unset($wp_filter['pre_get_posts']);				
+			}else{
+				$bak = false;
+			}	
+					
 			$wp_query = new WP_Query('page_id='.$template_page_id);
 			$o = $wp_query->get_queried_object();
 			//----- without this, template selection does not gets correctly done, always default.
@@ -163,6 +186,10 @@ class rhc_template_frontend {
 			$post = $o;
 			//------------
 			$template = get_page_template();
+
+			if(false!==$bak){
+				$wp_filter['pre_get_posts'] = $bak;
+			}
 			
 			$post_content = $this->get_taxonomy_content($term_id,$taxonomy,$o->post_content);
 /*
@@ -172,7 +199,9 @@ class rhc_template_frontend {
 */
 			$o->post_title = $name;
 			$o->post_content = do_shortcode($post_content);
-			
+			$wp_query->post = $o;	
+			$wp_the_query = $wp_query;
+
 			return $template;		
 		}
 		return $this->_taxonomy_template($template);
@@ -204,7 +233,7 @@ class rhc_template_frontend {
 	function get_taxonomy_template_page_id($term_id,$taxonomy){
 		global $wpdb;
 		$page_id = intval(get_term_meta($term_id,'template_page_id',true));
-		if($page_id==0){
+		if($page_id==0 && in_array($taxonomy,array(RHC_VENUE,RHC_ORGANIZER,RHC_CALENDAR))){
 			global $rhc_plugin; 
 			$page_id = intval($rhc_plugin->get_option('taxonomy_template_page_id',0,true));
 		}
@@ -245,10 +274,10 @@ class rhc_template_frontend {
 			<div class="venue-details-holder">
 				<div class="venue-image-holder"><?php the_venue_image()?></div>
 				<div class="venue-defails">
-	            	<?php the_venue_detail( array('label'=>__('Address'),'field'=>'gaddress'))?>
-					<?php the_venue_detail( array('label'=>__('Telephone'),'field'=>'phone'))?>
-					<?php the_venue_detail( array('label'=>__('Email'),'field'=>'email'))?>
-					<?php the_venue_detail( array('label'=>__('Website'),'field'=>'website'))?>
+	            	<?php the_venue_detail( array('label'=>__('Address','rhc'),'field'=>'gaddress'))?>
+					<?php the_venue_detail( array('label'=>__('Telephone','rhc'),'field'=>'phone'))?>
+					<?php the_venue_detail( array('label'=>__('Email','rhc'),'field'=>'email'))?>
+					<?php the_venue_detail( array('label'=>__('Website','rhc'),'field'=>'website'))?>
 					<div class="venue-description"><?php the_venue_content();?></div>
 				</div>
 	           

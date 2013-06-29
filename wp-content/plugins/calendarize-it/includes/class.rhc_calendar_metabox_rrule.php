@@ -15,7 +15,7 @@ class rhc_calendar_metabox {
 			'post_type'=>$post_type,
 			'options'=>$this->metaboxes(),
 			'styles'=>array('post-meta-boxes','rhc-admin','rhc-jquery-ui','calendarize-metabox','farbtastic','rhc-options'),
-			'scripts'=>array('rhc-admin','fechahora','calendarize-metabox','farbtastic','pop'),
+			'scripts'=>array('calendarize','rhc-admin','fechahora','calendarize-metabox','farbtastic','pop'),
 			'metabox_meta_fields' =>  'calendar_metabox_meta_fields',
 			'pluginpath'=>RHC_PATH
 		));
@@ -109,15 +109,15 @@ class rhc_calendar_metabox {
 		$post_ID = intval($_POST['post_ID']);
 		if('page' == $this->post_type) {
 		    if (!current_user_can('edit_page', $post_ID)) {
-		        die(json_encode(array('R'=>'ERR','MSG'=>__('No access') )));
+		        die(json_encode(array('R'=>'ERR','MSG'=>__('No access','rhc') )));
 		    }
 		} elseif (!current_user_can('edit_post', $post_ID)) {
-		    die(json_encode(array('R'=>'ERR','MSG'=>__('No access') )));
+		    die(json_encode(array('R'=>'ERR','MSG'=>__('No access','rhc') )));
 		}		
 		
 		$data = isset($_POST['data'])&&count($_POST['data'])>0?$_POST['data']:false;
 		if(false===$data){
-			die(json_encode(array('R'=>'ERR','MSG'=>__('Missing parameter.') )));
+			die(json_encode(array('R'=>'ERR','MSG'=>__('Missing parameter.','rhc') )));
 		}
 		
 		$allempty = true;
@@ -189,15 +189,15 @@ class rhc_calendar_metabox {
 		$post_ID = intval($_POST['post_ID']);
 		if('page' == $this->post_type) {
 		    if (!current_user_can('edit_page', $post_ID)) {
-		        die(json_encode(array('R'=>'ERR','MSG'=>__('No access') )));
+		        die(json_encode(array('R'=>'ERR','MSG'=>__('No access','rhc') )));
 		    }
 		} elseif (!current_user_can('edit_post', $post_ID)) {
-		    die(json_encode(array('R'=>'ERR','MSG'=>__('No access') )));
+		    die(json_encode(array('R'=>'ERR','MSG'=>__('No access','rhc') )));
 		}		
 		
 		$data = isset($_POST['data'])&&count($_POST['data'])>0?$_POST['data']:false;
 		if(false===$data){
-			die(json_encode(array('R'=>'ERR','MSG'=>__('Missing parameter.') )));
+			die(json_encode(array('R'=>'ERR','MSG'=>__('Missing parameter.','rhc') )));
 		}
 		
 		$allempty = true;
@@ -238,6 +238,11 @@ class rhc_calendar_metabox {
 				'type'=>'clear'
 			)
 		);
+		
+		if(RHC_EVENTS!=$this->post_type){
+			return $t;
+			//the rest of the options are only specific to rhc events post type.
+		}
 		//------------------------------
 		$i++;
 		$t[$i]=(object)array();

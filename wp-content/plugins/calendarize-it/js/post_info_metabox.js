@@ -222,7 +222,9 @@ function init_sortable(){
 				//--fill values
 				$.each([['post_extrainfo_span','span'],['post_extrainfo_type','type'],['post_extrainfo_label','label'],['post_extrainfo_value','value'],['post_extrainfo_taxonomy','taxonomy'],['post_extrainfo_postmeta','postmeta']],function(i,s){
 					if( _input_id==s[0] ){
-						_value = post_extrainfo[index][s[1]];
+						if( typeof post_extrainfo[index]!='undefined' ){
+							_value = post_extrainfo[index][s[1]];
+						}
 					}				
 				});
 				if( 'post_extrainfo_taxonomymeta'==_input_id ){

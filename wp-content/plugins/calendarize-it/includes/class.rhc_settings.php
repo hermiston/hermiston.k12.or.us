@@ -165,7 +165,7 @@ class rhc_settings {
 			),
 			(object)array(
 				'id'		=> 'forced_rewrite_rules',
-				'label'		=> __('Forced rewrite rules','wlb'),
+				'label'		=> __('Forced rewrite rules','rhc'),
 				'type'		=> 'yesno',
 				'description'=> __('Choose yes if permalinks are not working.  It will attempt an alternative method of adding rewrite rules.','rhc'),
 				'default'	=> '0',
@@ -178,7 +178,7 @@ class rhc_settings {
 				'label'		=> __('Enable calendar end point','rhc'),
 				'description'=> sprintf('<p>%s</p><p>%s</p>',
 					__('If permalinks are active, choose yes to be able to append /calendar/ to the url to load a calendar for that particular post type, example yourdomain.com/events/calendar/ will display the calendar without the need to setup the shortcode on a page.','rhc'),
-					__('If you have a page with permalink /events/calendar/ you may need to disable this, as it takes precedence over the page permlink.')
+					__('If you have a page with permalink /events/calendar/ you may need to disable this, as it takes precedence over the page permlink.','rhc')
 				),
 				'type'		=> 'yesno',
 				'default'	=> '1',
@@ -311,7 +311,7 @@ class rhc_settings {
 			$t[$i]->options = array(
 				(object)array(
 					'id'		=> 'ignore_wordpress_standard',
-					'label'		=> __('Ignore WordPress Standard','wlb'),
+					'label'		=> __('Ignore WordPress Standard','rhc'),
 					'type'		=> 'yesno',
 					'description'=> sprintf('<p>%s</p><p>%s</p>',
 						__('Choose yes only if you are getting a 404 page when trying to get an event page.','rhc'),
@@ -324,7 +324,7 @@ class rhc_settings {
 				),	
 				(object)array(
 					'id'		=> 'enable_theme_thumb',
-					'label'		=> __('Enable thumbnail support','wlb'),
+					'label'		=> __('Enable thumbnail support','rhc'),
 					'type'		=> 'yesno',
 					'description'=> __('Choose yes only if the thumbnail metabox is not showing when you edit event.  Usually themes enable this.','rhc'),
 					'default'	=> '0',
@@ -334,7 +334,7 @@ class rhc_settings {
 				),	
 				(object)array(
 					'id'		=> 'enable_debug',
-					'label'		=> __('Enable debug','wlb'),
+					'label'		=> __('Enable debug','rhc'),
 					'type'		=> 'yesno',
 					'description'=> __('Choose yes to display a debug menu.  This provide technical information that support can use to troubleshoot problems.','rhc'),
 					'default'	=> '0',
@@ -346,12 +346,23 @@ class rhc_settings {
 					'id'			=> 'rhc-api-url',
 					'type' 			=> 'text',
 					'label'			=> __('Api url','rhc'),
-					'description'	=> __('On some setups, wordpress is installed in a non-standard way and causes the site_url() function to return a value that is diferent from the real url, causing the browser to reject the ajax.  You need to add rhc_action=get_calendar_events to the query string.'),
+					'description'	=> __('On some setups, wordpress is installed in a non-standard way and causes the site_url() function to return a value that is diferent from the real url, causing the browser to reject the ajax.  You need to add rhc_action=get_calendar_events to the query string.','rhc'),
 					'el_properties' => array('class'=>'widefat'),
 					'save_option'=>true,
 					'load_option'=>true
 				),				
-										
+				(object)array(
+					'id'		=> 'in_footer',
+					'label'		=> __('Scripts in footer','rhc'),
+					'type'		=> 'yesno',
+					'description'=> sprintf('<p>%s</p>',
+						__('Choose yes if you want this plugin scripts loaded in the footer.','rhc')
+					),
+					'default'	=> '0',
+					'el_properties'	=> array(),
+					'save_option'=>true,
+					'load_option'=>true
+				),						
 				(object)array(
 					'type'=>'clear'
 				),
@@ -387,8 +398,8 @@ class rhc_settings {
 					'default'		=> '',
 					'options'		=> array(
 						''			=> __('Auto','rhc'),
-						'rhc-jquery-ui-1-9-0'	=> __('jQuery UI 1.9.0'),
-						'rhc-jquery-ui-1-8-22'	=> __('jQuery UI 1.8.22'),
+						'rhc-jquery-ui-1-9-0'	=> __('jQuery UI 1.9.0','rhc'),
+						'rhc-jquery-ui-1-8-22'	=> __('jQuery UI 1.8.22','rhc'),
 						'none'		=> __('Do not load bundled jQuery UI','rhc')
 					),
 					'el_properties'	=> array(),

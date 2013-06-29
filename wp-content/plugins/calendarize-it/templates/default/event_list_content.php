@@ -30,7 +30,7 @@
 									
 									<div class="rhc-info-cell">
 										<label class="fe-extrainfo-label"><?php _e('Address','rhc')?></label>
-										<span class="fe-extrainfo-value taxonomy-<?php echo RHC_VENUE?>-gaddress"></span>
+										<span class="fe-extrainfo-value fc-event-term taxonomy-<?php echo RHC_VENUE?>-gaddress"></span>
 									</div>	
 								</div>
 								<div class="span6 fe-maincol fe-maincol-1">						

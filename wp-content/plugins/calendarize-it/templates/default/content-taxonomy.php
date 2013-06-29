@@ -15,4 +15,4 @@
 		</div>
 		<div class="clear"></div>
 	</div>
-	[calendarizeit defaultview="rhc_event" taxonomy="<?php echo $taxonomy ?>" terms="<?php echo $term->slug?>"]
+	[calendarizeit feed="0" defaultview="rhc_event" taxonomy="<?php echo $taxonomy ?>" terms="<?php echo $term->slug?>"]

@@ -181,11 +181,15 @@ class shortcode_venues {
 			'zip'=>'',
 			'country'=>'',
 			'traffic'=>'false',
-			'markers'=>'|||::'//markers
+			'markers'=>'|||::',//markers
+			'scrollwheel'=>'1'
 		);
 
 		extract(shortcode_atts($fields, $atts));
 
+		global $rhc_plugin;
+		$scrollwheel = $rhc_plugin->get_option('gmap3_scrollwheel',$scrollwheel,true);
+		
 		$glat = ''==trim($glat)?0:$glat;
 		$glon = ''==trim($glon)?0:$glon;
 		$zoom = ''==trim($zoom)?13:$zoom;
@@ -210,7 +214,7 @@ class shortcode_venues {
 		//return $address;
 		ob_start();
 ?><div class="sws-gmap3-frame"><div id="map_canvas{uid}" class="sws-gmap3-cont" style="width: {canvas_width}px; height: {canvas_height}px"></div></div><div id="sws-gmap3-marker-{uid}" class="sws-gmap3-marker">{markers}</div>
-<div class="sws-gmap3-marker"><div id="sws-gmap3-info-{uid}" >{info_windows}</div></div><script>jQuery(document).ready(function($){rhc_gmap3_init({glat:{glat},glon:{glon},zoom:{zoom},disableDefaultUI:{disableDefaultUI},map_type:google.maps.MapTypeId.{map_type},uid:{uid},name:"{name}",info_windows:"sws-gmap3-info-{uid}",markers:"#sws-gmap3-marker-{uid}",address:"{address}",traffic:{traffic}});});</script><?php		
+<div class="sws-gmap3-marker"><div id="sws-gmap3-info-{uid}" >{info_windows}</div></div><script>jQuery(document).ready(function($){rhc_gmap3_init({glat:{glat},glon:{glon},zoom:{zoom},disableDefaultUI:{disableDefaultUI},map_type:google.maps.MapTypeId.{map_type},uid:{uid},name:"{name}",info_windows:"sws-gmap3-info-{uid}",markers:"#sws-gmap3-marker-{uid}",address:"{address}",scrollwheel:{scrollwheel},traffic:{traffic}});});</script><?php		
 		$content = ob_get_contents();
 		ob_end_clean();
 		foreach($fields as $field => $default){

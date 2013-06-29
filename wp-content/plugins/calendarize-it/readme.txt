@@ -3,10 +3,50 @@ Author: Alberto Lau (RightHere LLC)
 Author URL: http://plugins.righthere.com/calendarize-it/
 Tags: WordPress, Calendar, Event, Recurring Events, Arbitrary Recurring Events, Venues, Organizers, jQuery
 Requires at least: 3.1
-Tested up to: 3.6 Beta3
-Stable tag: 2.0.0 rev36624
+Tested up to: 3.5.2
+Stable tag: 2.0.9 rev37669
 
 == CHANGELOG ==
+Version 2.0.9 rev37669 - June 25, 2013
+* New Feature: Added option (Troubleshooting) to load Javascripts in the footer
+* Update: Compatibility fix for some themes where CSS is breaking event positioning in the calendar
+* Update: Missing textdomains for Internationalization (translation) has been added
+
+Version 2.0.8 rev37530 - June 21, 2013
+* New Feature: Add troubleshooting option to load bootstrap in the footer in an attempt to prevent a jQuery-ui/boostrap conflict with buttons (this is for the CSS Editor)
+* Bug Fixed: Visibility check script jQuery dependency.
+* Bug Fixed: Line height decimals should not be removed.
+
+Version 2.0.7 rev37479 - June 19, 2013
+* Update: Add a default line height to boxes labels
+* Bug Fixed: Remove several php warnings
+* Update: In wp-admin load js only on rhc admin screens (fixing conflict with Revolution Slider)
+
+Version 2.0.6 rev37191 - June 18, 2013
+* Improvement: Added class for a 640px width browser in order to make the calendar navigation and header look nicer in themes where the calendar is inserted on a page with a sidebar.
+* New Feature: Added a global option to enable/disable Google Map zoom with mouse wheel.
+
+Version 2.0.5 rev37111 - June 6, 2013
+* Bug Fixed: Event and Taxonomy pages not loading content or post info boxes on some themes and plugins that make use of wp_reset_query()
+* Bug Fixed: Taxonomy pages should not show external feed (feed from External Event Sources add-on)
+* Bug Fixed: Venue Detail Box not showing right venue detail on newly created events
+* Update: When creating new posts set the post info box post id to the newly created event.
+
+Version 2.0.4 rev37015 - June 5, 2013
+* Bug Fixed: Prevent rhc template loader from taking over non-rhc taxonomy templates.
+
+Version 2.0.3 rev36966 - June 4, 2013
+* Update: Add style to compensate for some themes that are breaking the mobile styles on the calendar.
+* Update: Compatibility fix, IE8 breaks when upcoming widgets are loaded.
+
+Version 2.0.2 rev36833 - June 1, 2013
+* Update: Modified the registration tab so that it uses its own capability. Modified implementation so that Options now require rhc_options instead of manage_options and rhc_license for registration (you need to deactivate and activate the plugin in order to insert he new capabilities)
+* Bug Fixed: Problem with [calendarize feed=1] shortcode used with External Event Sources add-on fixed.
+
+Version 2.0.1 rev36824 - May 30, 2013
+* Update: Added support for translating values in custom fields, by adding a variable eg. _($instance['Event Details'],'rhc'). You will need to manually add the translation string (this can easily be done if you use our Easy Translation Manager).
+* New Feature: Paid Add-ons and Free Add-ons in Downloads (require entering a valid License Key)
+
 Version 2.0.0 rev36624 - May 23, 2013
 * New Feature: Added Visual CSS Editor for advanced styling of Calendarize it!
 * New Feature: Added Downloads section for installing add-ons and skins (templates)

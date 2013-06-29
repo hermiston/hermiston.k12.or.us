@@ -201,6 +201,13 @@ class rhc_post_info_shortcode {
 	function get_post_extra_info($post_ID,$postinfo_boxes_id){
 		$postinfo_boxes = get_post_meta($post_ID,'postinfo_boxes',true);
 		if(isset($postinfo_boxes[$postinfo_boxes_id])){
+			//-- bug fix, force the post_ID, as when saving this was not correctly assigned.
+			if(property_exists($postinfo_boxes[$postinfo_boxes_id],'data') && is_array($postinfo_boxes[$postinfo_boxes_id]->data) && count($postinfo_boxes[$postinfo_boxes_id]->data)>0){
+				foreach($postinfo_boxes[$postinfo_boxes_id]->data as $data_id => $data_o){
+					$postinfo_boxes[$postinfo_boxes_id]->data[$data_id]->post_ID = $post_ID;
+				}				
+			}
+			//------
 			return $postinfo_boxes[$postinfo_boxes_id];
 		}else{
 			$response = (object)array(
@@ -249,7 +256,12 @@ class rhc_post_info_field {
 		$taxonomy_links = $taxonomy_links=='1'?true:false;
 		
 		foreach(array('id'=>'','type'=> '','label'=>'','value'=>'','taxonomy'=>'','postmeta'=>'','taxonomymeta'=>'','taxonomymeta_field'=>'','post_ID'=>false,'date_format'=>false,'render_cb'=>false,'taxonomy_links'=>$taxonomy_links,'column'=>false,'span'=>12,'offset'=>0,'index'=>'') as $field => $default){
-			$this->$field = isset($args[$field])?$args[$field]:$default;
+			if($field=='label'){
+				$v = isset($args[$field])? translate($args[$field],'rhc') : translate($default,'rhc');	
+			}else{
+				$v = isset($args[$field])?$args[$field]:$default;
+			}
+			$this->$field = $v;
 		}
 		
 		if( in_array( $this->type, array('taxonomy','taxonomymeta','custom') ) ){

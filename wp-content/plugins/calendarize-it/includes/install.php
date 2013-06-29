@@ -41,7 +41,10 @@ function handle_rhc_install(){
 		
 		'manage_'.RHC_VENUE,
 		'manage_'.RHC_CALENDAR,
-		'manage_'.RHC_ORGANIZER
+		'manage_'.RHC_ORGANIZER,
+		
+		'rhc_options',
+		'rhc_license'
 		) as $cap){
 		$WP_Roles->add_cap( RHC_ADMIN_ROLE, $cap );
 	}	

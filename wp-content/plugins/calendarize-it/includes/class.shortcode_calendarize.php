@@ -219,8 +219,17 @@ class shortcode_calendarize {
 			'loading_overlay'	=> false,
 			'init_in_footer'	=> '',//set to 1 to init in the footer.
 			'week_numbers'		=> '0',
-			'week_numbers_title'=> 'W'
+			'week_numbers_title'=> 'W',
+			'json_feed'			=> '',
+			'json_only'			=> 0,
+			'google_feed'		=> '',
+			'google_only'		=> 0,
+			'feed'				=> ''// 0 for local, 1 for external, empty for both.
 		), $atts));
+		
+		$json_feed = isset($google_feed)?$google_feed:$json_feed;
+		$json_only = isset($google_only)?$google_only:$json_only;
+		$json_only = $feed=='1'?1:0;
 		
 		if(empty($isrtl)){
 			$isrtl = is_rtl() ? '1' : '';
@@ -250,6 +259,36 @@ class shortcode_calendarize {
 //$events_source.=$events_source_query;
 		$event_click = 'fc_click';
 		
+		if($json_feed!=''){
+			$icalendar=0;
+			$json_feed = explode('||',$json_feed);
+			if(is_array($json_feed) && count($json_feed)>0){
+				$tmp = array();
+				foreach($json_feed as $f){
+					$arr = explode('|',$f);
+					if(count($arr)==1){
+						$tmp[]=$f;
+					}else if(count($arr)==3){
+						$tmp[]=(object)array(
+							'url'=>$arr[0],
+							'color'=>$arr[1],
+							'textColor'=>$arr[2]
+						);
+					}
+				}
+				$json_feed = $tmp;
+			}
+		}else{
+			if($feed!='0'){
+				$json_feed = apply_filters('rhc_json_feed',false);			
+			}
+		}
+/*
+echo "<pre>";
+print_r($json_feed);
+echo "</pre>";
+die();
+*/
 		$options = (object)array(
 			'editable'		=> ($editable && current_user_can($this->capabilities['calendarize_author'])),
 			'mode'			=> $mode,
@@ -353,7 +392,9 @@ class shortcode_calendarize {
 						'firstHour'		=> $firsthour,
 						'slotMinutes'	=> intval($slotminutes),
 						'minTime'		=> $mintime,
-						'maxTime'		=> $maxtime	
+						'maxTime'		=> $maxtime,
+						'json_feed'		=> $json_feed,
+						'json_only'		=> $json_only
 					)	
 				),
 				'edit' => array(
@@ -444,9 +485,11 @@ class shortcode_calendarize {
 						'minTime'		=> $mintime,
 						'maxTime'		=> $maxtime	,		
 						//-- same as view mode
-						'editable'	=> true,
-						'selectable'=> true,
-						'select'	=> 'fc_select'
+						'editable'		=> true,
+						'selectable'	=> true,
+						'select'		=> 'fc_select',
+						'json_feed'		=> $json_feed,
+						'json_only'		=> $json_only
 					)	
 				)				
 			),

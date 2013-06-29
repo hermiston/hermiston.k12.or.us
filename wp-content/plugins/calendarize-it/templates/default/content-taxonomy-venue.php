@@ -31,4 +31,4 @@
 		</div>
 		<div class="fe-map-holder span6">[venue_gmap canvas_width='500' canvas_height='300' zoom='{gzoom}' address='{gaddress}' glat='{glat}' glon='{glon}' info_windows='{ginfo}']</div>
 	</div>
-</div>[/venuemeta]<div class="venue-page-description"><?php echo get_the_tax_content();?> </div>[calendarizeit defaultview="rhc_event" taxonomy="<?php echo $taxonomy ?>" terms="<?php echo $term->slug?>" ]
+</div>[/venuemeta]<div class="venue-page-description"><?php echo get_the_tax_content();?> </div>[calendarizeit feed="0" defaultview="rhc_event" taxonomy="<?php echo $taxonomy ?>" terms="<?php echo $term->slug?>" ]

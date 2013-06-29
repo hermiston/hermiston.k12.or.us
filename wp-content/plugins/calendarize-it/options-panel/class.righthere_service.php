@@ -13,7 +13,9 @@ class righthere_service {
 	}
 	
 	function rh_service($url){
-		$request = wp_remote_post( $url , array('timeout'=>10) );
+		ini_set('memory_limit','100M');
+		set_time_limit ( 360 );	
+		$request = wp_remote_post( $url , array('timeout'=>360) );
 		if ( is_wp_error($request) ){
 			$this->last_error_str = $request->get_error_message();
 			return false;

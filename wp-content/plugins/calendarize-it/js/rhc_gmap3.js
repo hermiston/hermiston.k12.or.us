@@ -18,6 +18,7 @@ function rhc_gmap3_init(obj){
 		
 	    var latlng = new google.maps.LatLng( obj.glat, obj.glon);
 	    var myOptions = {
+		  scrollwheel: (typeof obj.scrollwheel=='undefined' ? true :obj.scrollwheel),
 	      zoom: obj.zoom,
 	      center: latlng,
 		  disableDefaultUI: obj.disableDefaultUI,

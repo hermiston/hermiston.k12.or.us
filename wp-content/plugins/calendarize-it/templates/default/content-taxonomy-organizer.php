@@ -24,4 +24,4 @@
 			[tax_detail field="image"]
 		</div>
 	</div>
-</div>[/organizermeta] <div class="organizer-page-description"><?php echo get_the_tax_content();?> </div> [calendarizeit defaultview="rhc_event" taxonomy="<?php echo $taxonomy ?>" terms="<?php echo $term->slug?>"]
+</div>[/organizermeta] <div class="organizer-page-description"><?php echo get_the_tax_content();?> </div> [calendarizeit feed="0" defaultview="rhc_event" taxonomy="<?php echo $taxonomy ?>" terms="<?php echo $term->slug?>"]

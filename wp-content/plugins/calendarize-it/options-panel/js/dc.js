@@ -58,7 +58,7 @@ function get_bundles(){
 			jQuery('#installing').hide();
 			if(data.R=='OK'){
 				rh_bundles = [];
-				jQuery.each(data.BUNDLES,function(i,o){
+				jQuery.each(data.BUNDLES,function(i,o){			
 					rh_bundles[rh_bundles.length]={
 						id: o.id,
 						type: o.type,
@@ -70,11 +70,14 @@ function get_bundles(){
 						status: o.status,
 						downloaded: is_downloaded(o.id),
 						addon_path: o.addon_path,
-						image: o.image
+						image: o.image,
+						item_no_1: o.item_no_1?o.item_no_1:'',
+						item_no_2: o.item_no_2?o.item_no_2:''
 					};
 				
 					data.BUNDLES[i].downloaded = is_downloaded(o.id);
-				});		
+				});	
+				stripe_public_key = data.STRIPEKEY;
 				populate_bundles(data.BUNDLES);
 			}else if(data.R=='ERR'){
 				jQuery('#messages').removeClass('updated').addClass('error').html(data.MSG);
@@ -123,7 +126,20 @@ function add_bundle(bundles){
 	if(bundles.length>0){
 		jQuery(document).ready(function($){
 			o=bundles.shift();
-
+			o.registered=false;
+			o.registered_main=false;
+			
+			if( o.item_no_1 && o.item_no_1>0 && $.inArray(o.item_no_1,rh_item_ids)>-1 ){
+				o.registered_main = true;
+				if(o.item_no_2 && o.item_no_2>0){
+					if( $.inArray(o.item_no_2,rh_item_ids)>-1 ){
+						o.registered=true;
+					}
+				}else{
+					o.registered=true;
+				}
+			}					
+			
 			var retina = typeof window.devicePixelRatio!='undefined' && window.devicePixelRatio > 1;
 			var src = o.image;
 			if(retina){
@@ -141,6 +157,7 @@ function add_bundle(bundles){
 				.addClass( (o.recent=='1'?'dlc-recent':'dlc-not-recent') )
 				.find('.pop-dlc-name').html(o.name).end()
 				.find('.pop-dlc-version').html(o.version).end()
+				.find('.pop-dlc-price').html(o.price_str).end()
 				.find('.pop-dlc-description').html(o.description).end()
 				.find('.pop-dlc-filesize').html(readablizeBytes(o.filesize)).end()
 				.find('.pop-dlc-image')
@@ -154,7 +171,7 @@ function add_bundle(bundles){
 					.end()
 				.find('.btn-download')
 					.attr('rel',o.id)
-					.on('click',function(e){download_bundle(e);})
+					.on('click',function(e){download_bundle(e,this);})
 					.end()
 				.find('.dlc-addon-control')
 					.data('addon_path',o.addon_path)
@@ -214,7 +231,56 @@ function add_bundle(bundles){
 					})
 				;
 			}
+		
+			if(o.registered_main && o.registered){
+				template.find('.btn-download').removeClass('disabled').addClass('btn-primary').show();
+			}else{
+				template.find('.btn-download').addClass('disabled').removeClass('btn-primary');
+				if(!o.registered_main){
+					template.find('.btn-download').addClass('pending-main-license');
+				}
+				if(!o.registered){
+					template.find('.btn-download').addClass('pending-addon-license');
+				}
+			}
 			
+			if(o.price>0 ){
+				if( o.registered ){
+					template.find('.btn-purchased').show();
+				}else{
+					template.find('.btn-buynow')
+						.attr('data-item_id', o.id)
+						.attr('data-key',stripe_public_key)
+						.attr('data-amount', parseInt(o.price*100) )
+						.attr('data-currency', o.currency)
+						.attr('data-name', o.name)
+						.attr('data-description', o.description)
+						.attr('data-image', o.image)
+						.show()
+
+					;
+					
+					if( o.registered_main ){
+						template.find('.btn-buynow')
+							.on('click',function(e){
+								return stripe_buy_now(e,this);
+							})
+						;
+					}else{
+						template.find('.btn-buynow')
+							.removeClass('btn-success')
+							.addClass('disabled')
+							.on('click',function(e){
+								$(this).parents('.pop-dlc-item')
+									.find('.main-license-message')
+									.show()
+							})							
+						;
+						$('#bundles').isotope('reLayout');
+					}
+				}
+			}
+
 			$('#bundles').isotope('insert', template);
 			
 			add_bundle(bundles);
@@ -224,8 +290,79 @@ function add_bundle(bundles){
 	}		
 }
 
-function download_bundle(e){
+function handle_stripe_token(res){
+	_handle_stripe_token(res,3);
+}
+
+function _handle_stripe_token(res,retries){
+	if(retries==0){
+		alert('There was a communication error and the payment could not be confirmed.  Please contact support at support.righthere.com about dlc payment: ' + res.id);
+		return;
+	}
+	
+	var args = {
+		action:'handle_stripe_token_'+rh_download_panel_id,
+		token: res.id,
+		item_id: stripe_item_id,
+		info: res
+	};
+
+	jQuery.ajax({
+		type: 'POST',
+		url: ajaxurl,
+		data: args,
+		success: function(data){
+			if(data.R=='OK'){
+				//--
+				rh_item_ids[rh_item_ids.length] = data.LICENSE.item_id;
+				rh_license_keys[rh_license_keys.length] = data.LICENSE.license_key;
+				//--
+				rh_bundles = [];
+				get_bundles();
+			}else if(data.R=='ERR'){
+				alert(data.MSG);
+			}else{
+				//unknown response
+				_handle_stripe_token(res,retries--);
+			}	
+		},
+		error: function(jqXHR, textStatus, errorThrown){
+			_handle_stripe_token(res,retries--);
+		},
+		dataType: 'json'
+	});		
+}
+
+function stripe_buy_now(e,btn){
 	jQuery(document).ready(function($){
+		stripe_item_id = $(btn).attr('data-item_id');
+		$(btn).addClass('disabled');
+		StripeCheckout.open({
+	        key:         $(btn).attr('data-key'),
+	        address:     true,
+	        amount:      $(btn).attr('data-amount'),
+	        currency:    $(btn).attr('data-currency'),
+	        name:        $(btn).attr('data-name'),
+			image:		 $(btn).attr('data-image'),
+	        description: $(btn).attr('data-description'),
+	        panelLabel:  $(btn).attr('data-panel_label'),
+	        token:       handle_stripe_token
+		});
+	});
+	return false;
+}
+
+function download_bundle(e,btn){
+	jQuery(document).ready(function($){
+		if( $(btn).hasClass('disabled') ) {
+			if( $(btn).hasClass('pending-main-license') ){
+				$(btn).parents('.pop-dlc-item').find('.main-license-message').show();
+			}else if( $(btn).hasClass('pending-addon-license') ){
+				//$(btn).parents('.pop-dlc-item').find('.addon-license-message').show();
+			}
+			$('#bundles').isotope('reLayout');
+			return;
+		}
 		$('#install-message').empty().append('<div class="row-message"><span>Downloading content...</span></div>');
 		$('#installing').fadeIn();
 		var id = jQuery(e.target).attr('rel');
@@ -238,6 +375,7 @@ function download_bundle(e){
 			type: 'POST',
 			url: ajaxurl,
 			data: args,
+			timeout: 360000,
 			success: function(data){			
 				$('#installing').hide();			
 				if(data.R=='OK'){

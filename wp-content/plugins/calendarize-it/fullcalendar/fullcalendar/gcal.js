@@ -57,7 +57,7 @@ function transformOptions(sourceOptions, start, end) {
 		success: function(data) {
 			var events = [];
 			if (data.feed.entry) {
-				$.each(data.feed.entry, function(i, entry) {
+				$.each(data.feed.entry, function(i, entry) {		
 					var startStr = entry['gd$when'][0]['startTime'];
 					var start = parseISO8601(startStr, true);
 					var end = parseISO8601(entry['gd$when'][0]['endTime'], true);
@@ -74,6 +74,7 @@ function transformOptions(sourceOptions, start, end) {
 					if (allDay) {
 						addDays(end, -1); // make inclusive
 					}
+					
 					events.push({
 						id: entry['gCal$uid']['value'],
 						title: entry['title']['$t'],
@@ -82,7 +83,16 @@ function transformOptions(sourceOptions, start, end) {
 						end: end,
 						allDay: allDay,
 						location: entry['gd$where'][0]['valueString'],
-						description: entry['content']['$t']
+						description: entry['content']['$t'],
+						fc_click_link: 'view',
+						gcal:true,
+						terms: [{
+							taxonomy: 'venue',
+							taxonomy_label: 'Venue',
+							name: '',
+							url: '',
+							gaddress: entry['gd$where'][0]['valueString']  
+						}]					
 					});
 				});
 			}

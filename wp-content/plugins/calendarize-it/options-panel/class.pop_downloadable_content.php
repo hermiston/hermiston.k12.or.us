@@ -28,6 +28,7 @@ class pop_downloadable_content {
 			'api_url'				=> 'http://plugins.righthere.com/',
 			//'api_url'				=> 'http://plugins.albertolau.com/',
 			'license_keys'			=> array(),
+			'plugin_code'			=> '',
 			'module_url'			=> plugin_dir_url(__FILE__),
 			'product_name'			=> 'your plugin or theme',
 			'tdom'					=> 'downloads',
@@ -43,13 +44,14 @@ class pop_downloadable_content {
 		add_action('wp_ajax_rh_get_bundles_'.$this->id, array(&$this,'get_bundles'));
 		add_action('wp_ajax_rh_download_bundle_'.$this->id, array(&$this,'download_bundle'));
 		add_action('wp_ajax_dlc_activate_addon_'.$this->id, array(&$this,'handle_activate_addon'));
+		add_action('wp_ajax_handle_stripe_token_'.$this->id, array(&$this,'handle_stripe_token'));
 		
 		add_action('init',array(&$this,'init'));
 	}
 	
 	function init(){
-		wp_register_script('rh-dc', 	$this->module_url.'js/dc.js', array(), '1.0.0');
-		wp_register_style('rh-dc', 		$this->module_url.'css/dc.css', array(), '1.0.0');
+		wp_register_script('rh-dc', 	$this->module_url.'js/dc.js', array(), '2.0.0');
+		wp_register_style('rh-dc', 		$this->module_url.'css/dc.css', array(), '2.0.0');
 	}
 	
 	function get_license_keys(){
@@ -57,6 +59,16 @@ class pop_downloadable_content {
 		if(count($this->license_keys)>0){	
 			foreach($this->license_keys as $k){
 				$arr_of_keys[]=is_object($k)?$k->license_key:$k;
+			}
+		}	
+		return $arr_of_keys;
+	}
+	
+	function get_license_item_ids(){
+		$arr_of_keys=array();
+		if(count($this->license_keys)>0){	
+			foreach($this->license_keys as $k){
+				$arr_of_keys[]=is_object($k)?$k->item_id:$k;
 			}
 		}	
 		return $arr_of_keys;
@@ -71,6 +83,9 @@ class pop_downloadable_content {
 	}
 	
 	function get_bundles(){
+		//-- allow listing dlc without a license.
+		return $this->get_bundles_from_plugin_code();
+		//-- 
 		if(count($this->license_keys)==0){
 			$this->send_error( sprintf( __('There is no downloadable content at this time.  You must register %s before you can actually see available downloadable content. For more information on how to register %s, please go the Options menu and the License tab.','pop'),$this->product_name,$this->product_name));
 		}
@@ -87,6 +102,44 @@ class pop_downloadable_content {
 		if(false===$response){
 			$this->send_error( __('Service is unavailable, please try again later.','pop') );
 		}else{
+			return $this->send_response($response);
+		}		
+		die();	
+	}
+	
+	function get_bundles_from_plugin_code(){
+		$plugin_codes = apply_filters('dlc_plugin_code', array($this->plugin_code));
+		if(!is_array($plugin_codes) || empty($plugin_codes)){
+			return $this->send_error( sprintf( __('Plugin settings error.  Missing plugin code.','pop'),$this->product_name,$this->product_name));
+		}
+		
+		$url = sprintf('%s?content_service=get_bundles_from_codes&site_url=%s',$this->api_url,urlencode(site_url('/')));
+		foreach($plugin_codes as $code){
+			$url.=sprintf("&code[]=%s",urlencode($code));
+		}	
+
+		if(!class_exists('righthere_service'))require_once 'class.righthere_service.php';
+		$rh = new righthere_service();
+		$response = $rh->rh_service($url);
+		
+		if(false===$response){
+			$this->send_error( __('Service is unavailable, please try again later.','pop') );
+		}else{
+			if($response->R=='OK'){
+				if(property_exists($response,'BUNDLES') && is_array($response->BUNDLES) && count($response->BUNDLES)>0){
+					foreach($response->BUNDLES as $i => $bundle){
+						$currency = property_exists($bundle,'currency') ? $bundle->currency : 'USD';
+						//This is only for information purpose. it is not considered on payment procedures. Just like prices.
+						$response->BUNDLES[$i]->currency = $currency;
+						
+						if($bundle->price==0){
+							$response->BUNDLES[$i]->price_str = __('Free','pop');
+						}else{
+							$response->BUNDLES[$i]->price_str = sprintf('%s %s', $bundle->price, $currency);
+						}
+					}				
+				}
+			}
 			return $this->send_response($response);
 		}		
 		die();	
@@ -243,15 +296,19 @@ class pop_downloadable_content {
 		$installed_addons = array_keys($arr);
 		$installed_addons = is_array($installed_addons)?$installed_addons:array();	
 ?>
+<script src="https://checkout.stripe.com/v2/checkout.js"></script>
 <script>
 var rh_download_panel_id = '<?php echo $this->id?>';
 var apiurl = '<?php echo $this->api_url?>';
 var rh_license_keys = <?php echo json_encode($this->license_keys)?>;
+var rh_item_ids = <?php echo json_encode($this->get_license_item_ids())?>;
 var rh_downloaded = <?PHP echo json_encode($rh_downloaded_bundles)?>;
 var rh_filter = '';
 var rh_bundles = [];
 var rh_active_addons = <?php echo json_encode((array)$addons)?>;
 var rh_installed_addons = <?php echo json_encode((array)$installed_addons)?>;
+var stripe_public_key = '';
+var stripe_item_id = '';
 jQuery('document').ready(function($){
 	get_bundles();
 	
@@ -279,6 +336,7 @@ min-width:200px;
 	
 	function body(){
 		$license_keys = $this->get_license_keys();
+
 		if(!is_array($license_keys) || count($license_keys)==0){
 			$message = __('Please enter your license key in the Options Panel in order to get access to Downloads and Add-ons.','pop');
 			$message_class='updated';
@@ -292,6 +350,7 @@ min-width:200px;
 	<div class="icon32" id="icon-plugins"><br /></div>
 	<h2><?php echo $this->page_title?></h2>
 	<div id="messages" class="<?php echo $message_class?>"><?php echo $message?></div>
+	
 	<div id="installing">
 		<div id="install-image" class="dc-loading"></div>
 		<div id="install-message" class="install-message"></div>
@@ -325,6 +384,23 @@ min-width:200px;
 			<div class="pop-filesize-cont">
 				<div class="pop-dlc-filesize-label"><?php _e('Size','pop') ?></div>
 				<div class="pop-dlc-filesize">{filesize}</div>
+			</div>
+			
+			<div class="pop-price-cont">
+				<div class="pop-dlc-price-label"><?php _e('Price','pop') ?></div>
+				<div class="pop-dlc-price">{price}</div>
+			</div>
+			
+			<div class="pop-purchase-cont">
+				<button class="btn btn-success btn-purchased disabled" style="display:none;"><?php _e('Purchased','pop')?></button>
+				<button class="btn btn-success btn-buynow" data-panel_label="<?php _e('Checkout','pop')?>" style="display:none;"><?php _e('Buy now','pop')?></button>
+			</div>
+			
+			<div class="alert alert-error main-license-message" style="display:none;">
+				<?php _e('Enter your license key before you can purchase add-ons or download free add-ons.','pop')?>
+			</div>
+			<div class="alert alert-error addon-license-message" style="display:none;">
+				
 			</div>
 		</div>		
 		
@@ -399,7 +475,78 @@ min-width:200px;
 		uasort( $wp_plugins, '_sort_uname_callback' );
 		
 		return $wp_plugins;
-	}		
+	}	
+	
+	function handle_stripe_token(){
+		global $userdata;
+		
+		if(!current_user_can($this->capability)){
+			die(json_encode(array('R'=>'ERR','MSG'=>__('No access','pop'))));
+		}
+
+		foreach(array('token','item_id') as $field){
+			$$field = isset($_REQUEST[$field])?$_REQUEST[$field]:false;
+			if(false===$$field){
+				die(json_encode(array('R'=>'ERR','MSG'=>__('Plugin error.  Missing argument.','pop')."($field)")));
+			}
+		}		
+	
+		$license_keys = $this->get_license_keys();
+				
+		//-------------------------
+		$key = array();
+		foreach($this->get_license_keys() as $k){
+			$key[]=$k;
+		}	
+
+		$site = site_url('/');
+		$parts = parse_url($site);
+		$host = isset($parts['host'])?$parts['host']:$site;
+		
+		$args = array(
+			'timeout'	=> 60,
+			'body'		=> array(
+				'content_service'	=> 'stripe_checkout',
+				'token'				=> $token,
+				'item_id'			=> $item_id,
+				'site_url'			=> site_url('/'),
+				'email'				=> $userdata->user_email,
+				'buyer'				=> sprintf('%s@%s',$userdata->user_login, $host ),
+				'key'				=> $key
+			)
+		);
+	
+		$request = wp_remote_post( $this->api_url , $args );
+		if ( is_wp_error($request) ){
+			$message = sprintf( __('There was a communication error with the RightHere server. Contact support at support.righthere.com about payment %s.  Error message: %s','pop'),
+				$token,
+				$request->get_error_message()	
+			);
+			$this->send_error( $message );
+		}else{
+			$response = json_decode($request['body']);
+			if(is_object($response)&&property_exists($response,'R')){
+				if($response->R=='OK'){
+					$options = get_option($this->options_varname);
+					$options['license_keys'] = isset($options['license_keys'])?$options['license_keys']:array();
+					$options['license_keys'] = is_array($options['license_keys'])?$options['license_keys']:array();
+					$options['license_keys'][]=$response->LICENSE;
+					update_option($this->options_varname,$options);
+				}
+			
+				return $this->send_response($response);
+			}else{
+				$message = sprintf( __('There was a communication error with the RightHere server. Contact support at support.righthere.com about payment %s.  Error message: %s','pop'),
+					$token,
+					__('API Server returned an unrecognized format.','pop')
+				);
+				$this->send_error( $message );
+			}		
+		}
+		//-------------------------
+		$this->send_error( __('Service is unavailable, please try again later.','pop') );	
+		die();	
+	}	
 }
 
 endif;

@@ -1,0 +1,945 @@
+0000.000 () Opened log file at time: Mon, 24 Jun 2013 18:16:06 +0000
+0000.003 () UpdraftPlus: 1.6.17 WP: 3.5.2 PHP: 5.3.10-1ubuntu3.6 (Linux HSD-AS-01 3.2.0-29-generic #46-Ubuntu SMP Fri Jul 27 17:03:23 UTC 2012 x86_64) Server: Apache/2.2.22 (Ubuntu) max_execution_time: 900 memory_limit: 256M ZipArchive::addFile : Y
+0000.005 () Free space on disk containing Updraft's temporary directory: 2670546.8 Mb
+0000.007 () Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.009 () Processed schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.013 (0) Backup run: resumption=0, nonce=ac7e3c82a793, begun at=1372097766 (0s ago), job type=backup
+0000.014 (0) Scheduling a resumption (1) after 300 seconds (1372098066) in case this run gets aborted
+0000.015 (0) Creation of backups of directories: beginning
+0000.019 (0) Beginning creation of dump of plugins
+0000.228 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip.tmp: 100 files added (on-disk size: 1140.8 Kb)
+0000.361 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip.tmp: 200 files added (on-disk size: 2292.2 Kb)
+0000.781 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip.tmp: 300 files added (on-disk size: 12075 Kb)
+0000.868 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip.tmp: 400 files added (on-disk size: 12397.1 Kb)
+0000.968 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip.tmp: 500 files added (on-disk size: 12843.7 Kb)
+0001.152 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip.tmp: 600 files added (on-disk size: 13184.1 Kb)
+0001.325 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip.tmp: 700 files added (on-disk size: 13681.2 Kb)
+0001.437 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip.tmp: 800 files added (on-disk size: 14277.7 Kb)
+0001.688 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip.tmp: 900 files added (on-disk size: 15303.8 Kb)
+0001.799 (0) Created plugins zip - file size is 15977.8 Kb in 1.8 s (8981 Kb/s)
+0001.800 (0) Beginning creation of dump of themes
+0001.820 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip.tmp: 100 files added (on-disk size: 224 Kb)
+0001.838 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip.tmp: 200 files added (on-disk size: 357.5 Kb)
+0001.860 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip.tmp: 300 files added (on-disk size: 559.5 Kb)
+0001.968 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip.tmp: 400 files added (on-disk size: 1461.9 Kb)
+0002.236 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip.tmp: 500 files added (on-disk size: 2215.1 Kb)
+0002.271 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip.tmp: 600 files added (on-disk size: 2859.1 Kb)
+0002.306 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip.tmp: 700 files added (on-disk size: 3057.3 Kb)
+0002.356 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip.tmp: 800 files added (on-disk size: 3551.2 Kb)
+0002.388 (0) Created themes zip - file size is 4096.4 Kb in 0.6 s (6972.4 Kb/s)
+0002.389 (0) Beginning creation of dump of uploads
+0002.419 (0) Created uploads zip - file size is 1189.6 Kb in 0 s (40941.5 Kb/s)
+0002.420 (0) Beginning backup of other directories found in the content directory
+0002.420 (0) Looking for candidates to back up in: /srv/www/hermiston.k12.or.us/wp-content
+0002.421 (0) finding files: updraft: skipping: this is the updraft directory
+0002.422 (0) finding files: themes: skipping: this is the themes directory
+0002.422 (0) finding files: index.php: skipping: excluded by options
+0002.423 (0) finding files: plugins: skipping: this is the plugins directory
+0002.424 (0) finding files: upgrade: skipping: excluded by options
+0002.424 (0) finding files: uploads: adding to list
+0002.522 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip.tmp: 100 files added (on-disk size: 3929.5 Kb)
+0002.879 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip.tmp: 200 files added (on-disk size: 12843.2 Kb)
+0003.087 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip.tmp: 300 files added (on-disk size: 15228.6 Kb)
+0003.091 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip.tmp: 400 files added (on-disk size: 15228.6 Kb)
+0003.093 (0) Adding batch to zip file: over 25 Mb added on this batch (25.1 Mb, 216 files batched, 1 added so far); re-opening (prior size: 15228.6 Kb)
+0003.760 (0) A useful amount of data was added after this amount of zip processing: 1.5 s (normalised: 1.5 s, rate: 17358.7 Kb/s)
+0003.761 (0) Performance is good - will increase the amount of data we attempt to batch (time=1.479798078537, normalised_time=1.4747668790147, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=106651703)
+0003.763 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip.tmp: 500 files added (on-disk size: 40794.7 Kb)
+0004.137 (0) Zip: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip.tmp: 600 files added (on-disk size: 50722 Kb)
+0004.337 (0) Created others zip - file size is 52845.4 Kb in 1.9 s (27627.9 Kb/s)
+0004.339 (0) Saving backup status to database (elements: 8)
+0004.340 (0) Beginning creation of database dump
+0004.344 (0) Table hsd_options: Total expected rows (approximate): 174
+0004.365 (0) Table hsd_options: Total rows added: 430 in 0.02 seconds
+0004.366 (0) Table hsd_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_options.table.gz)
+0004.368 (0) Table hsd_users: Total expected rows (approximate): 5
+0004.369 (0) Table hsd_users: Total rows added: 5 in 0.00 seconds
+0004.369 (0) Table hsd_users: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_users.table.gz)
+0004.371 (0) Table hsd_usermeta: Total expected rows (approximate): 289
+0004.375 (0) Table hsd_usermeta: Total rows added: 252 in 0.01 seconds
+0004.376 (0) Table hsd_usermeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_usermeta.table.gz)
+0004.378 (0) Table hsd_10_commentmeta: Total expected rows (approximate): 0
+0004.378 (0) Table hsd_10_commentmeta: Total rows added: 0 in 0.00 seconds
+0004.379 (0) Table hsd_10_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_commentmeta.table.gz)
+0004.381 (0) Table hsd_10_comments: Total expected rows (approximate): 1
+0004.382 (0) Table hsd_10_comments: Total rows added: 1 in 0.00 seconds
+0004.383 (0) Table hsd_10_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_comments.table.gz)
+0004.384 (0) Table hsd_10_layerslider: Total expected rows (approximate): 1
+0004.385 (0) Table hsd_10_layerslider: Total rows added: 1 in 0.00 seconds
+0004.386 (0) Table hsd_10_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_layerslider.table.gz)
+0004.388 (0) Table hsd_10_links: Total expected rows (approximate): 0
+0004.388 (0) Table hsd_10_links: Total rows added: 0 in 0.00 seconds
+0004.389 (0) Table hsd_10_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_links.table.gz)
+0004.391 (0) Table hsd_10_options: Total expected rows (approximate): 207
+0004.407 (0) Table hsd_10_options: Total rows added: 351 in 0.02 seconds
+0004.408 (0) Table hsd_10_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_options.table.gz)
+0004.410 (0) Table hsd_10_postmeta: Total expected rows (approximate): 37
+0004.411 (0) Table hsd_10_postmeta: Total rows added: 37 in 0.00 seconds
+0004.412 (0) Table hsd_10_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_postmeta.table.gz)
+0004.414 (0) Table hsd_10_posts: Total expected rows (approximate): 9
+0004.416 (0) Table hsd_10_posts: Total rows added: 9 in 0.00 seconds
+0004.416 (0) Table hsd_10_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_posts.table.gz)
+0004.418 (0) Table hsd_10_term_relationships: Total expected rows (approximate): 3
+0004.419 (0) Table hsd_10_term_relationships: Total rows added: 3 in 0.00 seconds
+0004.419 (0) Table hsd_10_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_term_relationships.table.gz)
+0004.421 (0) Table hsd_10_term_taxonomy: Total expected rows (approximate): 3
+0004.422 (0) Table hsd_10_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0004.423 (0) Table hsd_10_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_term_taxonomy.table.gz)
+0004.424 (0) Table hsd_10_terms: Total expected rows (approximate): 3
+0004.425 (0) Table hsd_10_terms: Total rows added: 3 in 0.00 seconds
+0004.426 (0) Table hsd_10_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_terms.table.gz)
+0004.427 (0) Table hsd_11_commentmeta: Total expected rows (approximate): 0
+0004.428 (0) Table hsd_11_commentmeta: Total rows added: 0 in 0.00 seconds
+0004.428 (0) Table hsd_11_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_commentmeta.table.gz)
+0004.430 (0) Table hsd_11_comments: Total expected rows (approximate): 1
+0004.431 (0) Table hsd_11_comments: Total rows added: 1 in 0.00 seconds
+0004.431 (0) Table hsd_11_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_comments.table.gz)
+0004.433 (0) Table hsd_11_layerslider: Total expected rows (approximate): 1
+0004.434 (0) Table hsd_11_layerslider: Total rows added: 1 in 0.00 seconds
+0004.435 (0) Table hsd_11_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_layerslider.table.gz)
+0004.437 (0) Table hsd_11_links: Total expected rows (approximate): 0
+0004.437 (0) Table hsd_11_links: Total rows added: 0 in 0.00 seconds
+0004.438 (0) Table hsd_11_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_links.table.gz)
+0004.440 (0) Table hsd_11_options: Total expected rows (approximate): 289
+0004.455 (0) Table hsd_11_options: Total rows added: 352 in 0.02 seconds
+0004.456 (0) Table hsd_11_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_options.table.gz)
+0004.458 (0) Table hsd_11_postmeta: Total expected rows (approximate): 37
+0004.459 (0) Table hsd_11_postmeta: Total rows added: 37 in 0.00 seconds
+0004.460 (0) Table hsd_11_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_postmeta.table.gz)
+0004.462 (0) Table hsd_11_posts: Total expected rows (approximate): 8
+0004.463 (0) Table hsd_11_posts: Total rows added: 8 in 0.00 seconds
+0004.464 (0) Table hsd_11_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_posts.table.gz)
+0004.465 (0) Table hsd_11_term_relationships: Total expected rows (approximate): 3
+0004.466 (0) Table hsd_11_term_relationships: Total rows added: 3 in 0.00 seconds
+0004.467 (0) Table hsd_11_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_term_relationships.table.gz)
+0004.469 (0) Table hsd_11_term_taxonomy: Total expected rows (approximate): 3
+0004.470 (0) Table hsd_11_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0004.470 (0) Table hsd_11_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_term_taxonomy.table.gz)
+0004.472 (0) Table hsd_11_terms: Total expected rows (approximate): 3
+0004.473 (0) Table hsd_11_terms: Total rows added: 3 in 0.00 seconds
+0004.473 (0) Table hsd_11_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_terms.table.gz)
+0004.475 (0) Table hsd_12_commentmeta: Total expected rows (approximate): 0
+0004.476 (0) Table hsd_12_commentmeta: Total rows added: 0 in 0.00 seconds
+0004.476 (0) Table hsd_12_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_commentmeta.table.gz)
+0004.478 (0) Table hsd_12_comments: Total expected rows (approximate): 1
+0004.479 (0) Table hsd_12_comments: Total rows added: 1 in 0.00 seconds
+0004.480 (0) Table hsd_12_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_comments.table.gz)
+0004.481 (0) Table hsd_12_layerslider: Total expected rows (approximate): 1
+0004.482 (0) Table hsd_12_layerslider: Total rows added: 1 in 0.00 seconds
+0004.483 (0) Table hsd_12_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_layerslider.table.gz)
+0004.485 (0) Table hsd_12_links: Total expected rows (approximate): 0
+0004.486 (0) Table hsd_12_links: Total rows added: 0 in 0.00 seconds
+0004.486 (0) Table hsd_12_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_links.table.gz)
+0004.488 (0) Table hsd_12_options: Total expected rows (approximate): 1126
+0004.503 (0) Table hsd_12_options: Total rows added: 354 in 0.02 seconds
+0004.504 (0) Table hsd_12_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_options.table.gz)
+0004.506 (0) Table hsd_12_postmeta: Total expected rows (approximate): 37
+0004.507 (0) Table hsd_12_postmeta: Total rows added: 37 in 0.00 seconds
+0004.508 (0) Table hsd_12_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_postmeta.table.gz)
+0004.509 (0) Table hsd_12_posts: Total expected rows (approximate): 9
+0004.511 (0) Table hsd_12_posts: Total rows added: 9 in 0.00 seconds
+0004.512 (0) Table hsd_12_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_posts.table.gz)
+0004.513 (0) Table hsd_12_term_relationships: Total expected rows (approximate): 3
+0004.514 (0) Table hsd_12_term_relationships: Total rows added: 3 in 0.00 seconds
+0004.515 (0) Table hsd_12_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_term_relationships.table.gz)
+0004.516 (0) Table hsd_12_term_taxonomy: Total expected rows (approximate): 3
+0004.517 (0) Table hsd_12_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0004.518 (0) Table hsd_12_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_term_taxonomy.table.gz)
+0004.520 (0) Table hsd_12_terms: Total expected rows (approximate): 3
+0004.520 (0) Table hsd_12_terms: Total rows added: 3 in 0.00 seconds
+0004.521 (0) Table hsd_12_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_terms.table.gz)
+0004.523 (0) Table hsd_13_commentmeta: Total expected rows (approximate): 2
+0004.523 (0) Table hsd_13_commentmeta: Total rows added: 2 in 0.00 seconds
+0004.524 (0) Table hsd_13_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_commentmeta.table.gz)
+0004.526 (0) Table hsd_13_comments: Total expected rows (approximate): 1
+0004.527 (0) Table hsd_13_comments: Total rows added: 1 in 0.00 seconds
+0004.527 (0) Table hsd_13_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_comments.table.gz)
+0004.529 (0) Table hsd_13_layerslider: Total expected rows (approximate): 1
+0004.530 (0) Table hsd_13_layerslider: Total rows added: 1 in 0.00 seconds
+0004.531 (0) Table hsd_13_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_layerslider.table.gz)
+0004.532 (0) Table hsd_13_links: Total expected rows (approximate): 0
+0004.533 (0) Table hsd_13_links: Total rows added: 0 in 0.00 seconds
+0004.534 (0) Table hsd_13_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_links.table.gz)
+0004.536 (0) Table hsd_13_options: Total expected rows (approximate): 2198
+0004.550 (0) Table hsd_13_options: Total rows added: 351 in 0.02 seconds
+0004.551 (0) Table hsd_13_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_options.table.gz)
+0004.553 (0) Table hsd_13_postmeta: Total expected rows (approximate): 609
+0004.560 (0) Table hsd_13_postmeta: Total rows added: 480 in 0.01 seconds
+0004.561 (0) Table hsd_13_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_postmeta.table.gz)
+0004.563 (0) Table hsd_13_posts: Total expected rows (approximate): 165
+0004.577 (0) Table hsd_13_posts: Total rows added: 192 in 0.02 seconds
+0004.578 (0) Table hsd_13_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_posts.table.gz)
+0004.580 (0) Table hsd_13_term_relationships: Total expected rows (approximate): 40
+0004.581 (0) Table hsd_13_term_relationships: Total rows added: 40 in 0.00 seconds
+0004.582 (0) Table hsd_13_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_term_relationships.table.gz)
+0004.584 (0) Table hsd_13_term_taxonomy: Total expected rows (approximate): 17
+0004.585 (0) Table hsd_13_term_taxonomy: Total rows added: 17 in 0.00 seconds
+0004.586 (0) Table hsd_13_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_term_taxonomy.table.gz)
+0004.588 (0) Table hsd_13_terms: Total expected rows (approximate): 17
+0004.588 (0) Table hsd_13_terms: Total rows added: 17 in 0.00 seconds
+0004.589 (0) Table hsd_13_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_terms.table.gz)
+0004.591 (0) Table hsd_14_commentmeta: Total expected rows (approximate): 2
+0004.592 (0) Table hsd_14_commentmeta: Total rows added: 2 in 0.00 seconds
+0004.592 (0) Table hsd_14_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_commentmeta.table.gz)
+0004.594 (0) Table hsd_14_comments: Total expected rows (approximate): 1
+0004.595 (0) Table hsd_14_comments: Total rows added: 1 in 0.00 seconds
+0004.596 (0) Table hsd_14_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_comments.table.gz)
+0004.597 (0) Table hsd_14_layerslider: Total expected rows (approximate): 1
+0004.599 (0) Table hsd_14_layerslider: Total rows added: 1 in 0.00 seconds
+0004.600 (0) Table hsd_14_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_layerslider.table.gz)
+0004.602 (0) Table hsd_14_links: Total expected rows (approximate): 0
+0004.604 (0) Table hsd_14_links: Total rows added: 0 in 0.00 seconds
+0004.605 (0) Table hsd_14_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_links.table.gz)
+0004.607 (0) Table hsd_14_options: Total expected rows (approximate): 135
+0004.646 (0) Table hsd_14_options: Total rows added: 366 in 0.04 seconds
+0004.648 (0) Table hsd_14_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_options.table.gz)
+0004.650 (0) Table hsd_14_postmeta: Total expected rows (approximate): 121
+0004.657 (0) Table hsd_14_postmeta: Total rows added: 148 in 0.01 seconds
+0004.659 (0) Table hsd_14_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_postmeta.table.gz)
+0004.662 (0) Table hsd_14_posts: Total expected rows (approximate): 49
+0004.675 (0) Table hsd_14_posts: Total rows added: 63 in 0.02 seconds
+0004.677 (0) Table hsd_14_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_posts.table.gz)
+0004.679 (0) Table hsd_14_term_relationships: Total expected rows (approximate): 4
+0004.681 (0) Table hsd_14_term_relationships: Total rows added: 4 in 0.00 seconds
+0004.682 (0) Table hsd_14_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_term_relationships.table.gz)
+0004.685 (0) Table hsd_14_term_taxonomy: Total expected rows (approximate): 4
+0004.687 (0) Table hsd_14_term_taxonomy: Total rows added: 4 in 0.00 seconds
+0004.687 (0) Table hsd_14_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_term_taxonomy.table.gz)
+0004.690 (0) Table hsd_14_terms: Total expected rows (approximate): 4
+0004.692 (0) Table hsd_14_terms: Total rows added: 4 in 0.00 seconds
+0004.693 (0) Table hsd_14_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_terms.table.gz)
+0004.696 (0) Table hsd_15_commentmeta: Total expected rows (approximate): 2
+0004.697 (0) Table hsd_15_commentmeta: Total rows added: 2 in 0.00 seconds
+0004.698 (0) Table hsd_15_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_commentmeta.table.gz)
+0004.701 (0) Table hsd_15_comments: Total expected rows (approximate): 1
+0004.703 (0) Table hsd_15_comments: Total rows added: 1 in 0.00 seconds
+0004.704 (0) Table hsd_15_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_comments.table.gz)
+0004.706 (0) Table hsd_15_layerslider: Total expected rows (approximate): 1
+0004.708 (0) Table hsd_15_layerslider: Total rows added: 1 in 0.00 seconds
+0004.709 (0) Table hsd_15_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_layerslider.table.gz)
+0004.712 (0) Table hsd_15_links: Total expected rows (approximate): 0
+0004.714 (0) Table hsd_15_links: Total rows added: 0 in 0.00 seconds
+0004.715 (0) Table hsd_15_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_links.table.gz)
+0004.717 (0) Table hsd_15_options: Total expected rows (approximate): 121
+0004.755 (0) Table hsd_15_options: Total rows added: 351 in 0.04 seconds
+0004.756 (0) Table hsd_15_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_options.table.gz)
+0004.760 (0) Table hsd_15_postmeta: Total expected rows (approximate): 84
+0004.764 (0) Table hsd_15_postmeta: Total rows added: 84 in 0.01 seconds
+0004.766 (0) Table hsd_15_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_postmeta.table.gz)
+0004.769 (0) Table hsd_15_posts: Total expected rows (approximate): 33
+0004.778 (0) Table hsd_15_posts: Total rows added: 33 in 0.01 seconds
+0004.779 (0) Table hsd_15_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_posts.table.gz)
+0004.782 (0) Table hsd_15_term_relationships: Total expected rows (approximate): 3
+0004.784 (0) Table hsd_15_term_relationships: Total rows added: 3 in 0.00 seconds
+0004.785 (0) Table hsd_15_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_term_relationships.table.gz)
+0004.788 (0) Table hsd_15_term_taxonomy: Total expected rows (approximate): 3
+0004.789 (0) Table hsd_15_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0004.790 (0) Table hsd_15_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_term_taxonomy.table.gz)
+0004.793 (0) Table hsd_15_terms: Total expected rows (approximate): 3
+0004.795 (0) Table hsd_15_terms: Total rows added: 3 in 0.00 seconds
+0004.796 (0) Table hsd_15_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_terms.table.gz)
+0004.799 (0) Table hsd_16_commentmeta: Total expected rows (approximate): 2
+0004.800 (0) Table hsd_16_commentmeta: Total rows added: 2 in 0.00 seconds
+0004.802 (0) Table hsd_16_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_commentmeta.table.gz)
+0004.804 (0) Table hsd_16_comments: Total expected rows (approximate): 1
+0004.807 (0) Table hsd_16_comments: Total rows added: 1 in 0.00 seconds
+0004.808 (0) Table hsd_16_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_comments.table.gz)
+0004.811 (0) Table hsd_16_layerslider: Total expected rows (approximate): 1
+0004.813 (0) Table hsd_16_layerslider: Total rows added: 1 in 0.00 seconds
+0004.814 (0) Table hsd_16_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_layerslider.table.gz)
+0004.817 (0) Table hsd_16_links: Total expected rows (approximate): 0
+0004.819 (0) Table hsd_16_links: Total rows added: 0 in 0.00 seconds
+0004.819 (0) Table hsd_16_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_links.table.gz)
+0004.822 (0) Table hsd_16_options: Total expected rows (approximate): 505
+0004.859 (0) Table hsd_16_options: Total rows added: 344 in 0.04 seconds
+0004.861 (0) Table hsd_16_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_options.table.gz)
+0004.864 (0) Table hsd_16_postmeta: Total expected rows (approximate): 56
+0004.868 (0) Table hsd_16_postmeta: Total rows added: 56 in 0.01 seconds
+0004.869 (0) Table hsd_16_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_postmeta.table.gz)
+0004.873 (0) Table hsd_16_posts: Total expected rows (approximate): 29
+0004.880 (0) Table hsd_16_posts: Total rows added: 29 in 0.01 seconds
+0004.882 (0) Table hsd_16_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_posts.table.gz)
+0004.885 (0) Table hsd_16_term_relationships: Total expected rows (approximate): 7
+0004.887 (0) Table hsd_16_term_relationships: Total rows added: 7 in 0.00 seconds
+0004.888 (0) Table hsd_16_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_term_relationships.table.gz)
+0004.891 (0) Table hsd_16_term_taxonomy: Total expected rows (approximate): 6
+0004.893 (0) Table hsd_16_term_taxonomy: Total rows added: 6 in 0.00 seconds
+0004.894 (0) Table hsd_16_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_term_taxonomy.table.gz)
+0004.897 (0) Table hsd_16_terms: Total expected rows (approximate): 6
+0004.899 (0) Table hsd_16_terms: Total rows added: 6 in 0.00 seconds
+0004.900 (0) Table hsd_16_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_terms.table.gz)
+0004.903 (0) Table hsd_17_commentmeta: Total expected rows (approximate): 142
+0004.909 (0) Table hsd_17_commentmeta: Total rows added: 142 in 0.01 seconds
+0004.910 (0) Table hsd_17_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_commentmeta.table.gz)
+0004.914 (0) Table hsd_17_comments: Total expected rows (approximate): 93
+0004.926 (0) Table hsd_17_comments: Total rows added: 83 in 0.01 seconds
+0004.927 (0) Table hsd_17_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_comments.table.gz)
+0004.930 (0) Table hsd_17_layerslider: Total expected rows (approximate): 0
+0004.931 (0) Table hsd_17_layerslider: Total rows added: 0 in 0.00 seconds
+0004.932 (0) Table hsd_17_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_layerslider.table.gz)
+0004.935 (0) Table hsd_17_links: Total expected rows (approximate): 0
+0004.937 (0) Table hsd_17_links: Total rows added: 0 in 0.00 seconds
+0004.938 (0) Table hsd_17_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_links.table.gz)
+0004.941 (0) Table hsd_17_options: Total expected rows (approximate): 346
+0004.974 (0) Table hsd_17_options: Total rows added: 334 in 0.04 seconds
+0004.976 (0) Table hsd_17_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_options.table.gz)
+0004.979 (0) Table hsd_17_postmeta: Total expected rows (approximate): 4250
+0005.111 (0) Table hsd_17_postmeta: Total rows added: 3401 in 0.13 seconds
+0005.112 (0) Table hsd_17_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_postmeta.table.gz)
+0005.116 (0) Table hsd_17_posts: Total expected rows (approximate): 325
+0005.178 (0) Table hsd_17_posts: Total rows added: 315 in 0.06 seconds
+0005.180 (0) Table hsd_17_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_posts.table.gz)
+0005.183 (0) Table hsd_17_term_relationships: Total expected rows (approximate): 190
+0005.189 (0) Table hsd_17_term_relationships: Total rows added: 190 in 0.01 seconds
+0005.190 (0) Table hsd_17_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_term_relationships.table.gz)
+0005.193 (0) Table hsd_17_term_taxonomy: Total expected rows (approximate): 33
+0005.196 (0) Table hsd_17_term_taxonomy: Total rows added: 33 in 0.00 seconds
+0005.197 (0) Table hsd_17_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_term_taxonomy.table.gz)
+0005.200 (0) Table hsd_17_terms: Total expected rows (approximate): 30
+0005.202 (0) Table hsd_17_terms: Total rows added: 30 in 0.00 seconds
+0005.204 (0) Table hsd_17_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_terms.table.gz)
+0005.206 (0) Table hsd_18_commentmeta: Total expected rows (approximate): 0
+0005.208 (0) Table hsd_18_commentmeta: Total rows added: 0 in 0.00 seconds
+0005.209 (0) Table hsd_18_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_commentmeta.table.gz)
+0005.212 (0) Table hsd_18_comments: Total expected rows (approximate): 1
+0005.214 (0) Table hsd_18_comments: Total rows added: 1 in 0.00 seconds
+0005.215 (0) Table hsd_18_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_comments.table.gz)
+0005.218 (0) Table hsd_18_layerslider: Total expected rows (approximate): 1
+0005.220 (0) Table hsd_18_layerslider: Total rows added: 1 in 0.00 seconds
+0005.221 (0) Table hsd_18_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_layerslider.table.gz)
+0005.224 (0) Table hsd_18_links: Total expected rows (approximate): 0
+0005.225 (0) Table hsd_18_links: Total rows added: 0 in 0.00 seconds
+0005.226 (0) Table hsd_18_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_links.table.gz)
+0005.229 (0) Table hsd_18_options: Total expected rows (approximate): 662
+0005.268 (0) Table hsd_18_options: Total rows added: 355 in 0.04 seconds
+0005.269 (0) Table hsd_18_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_options.table.gz)
+0005.272 (0) Table hsd_18_postmeta: Total expected rows (approximate): 95
+0005.278 (0) Table hsd_18_postmeta: Total rows added: 95 in 0.01 seconds
+0005.279 (0) Table hsd_18_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_postmeta.table.gz)
+0005.282 (0) Table hsd_18_posts: Total expected rows (approximate): 43
+0005.292 (0) Table hsd_18_posts: Total rows added: 43 in 0.01 seconds
+0005.294 (0) Table hsd_18_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_posts.table.gz)
+0005.297 (0) Table hsd_18_term_relationships: Total expected rows (approximate): 7
+0005.299 (0) Table hsd_18_term_relationships: Total rows added: 7 in 0.00 seconds
+0005.300 (0) Table hsd_18_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_term_relationships.table.gz)
+0005.303 (0) Table hsd_18_term_taxonomy: Total expected rows (approximate): 4
+0005.305 (0) Table hsd_18_term_taxonomy: Total rows added: 4 in 0.00 seconds
+0005.306 (0) Table hsd_18_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_term_taxonomy.table.gz)
+0005.309 (0) Table hsd_18_terms: Total expected rows (approximate): 4
+0005.311 (0) Table hsd_18_terms: Total rows added: 4 in 0.00 seconds
+0005.312 (0) Table hsd_18_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_terms.table.gz)
+0005.315 (0) Table hsd_19_commentmeta: Total expected rows (approximate): 0
+0005.316 (0) Table hsd_19_commentmeta: Total rows added: 0 in 0.00 seconds
+0005.318 (0) Table hsd_19_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_commentmeta.table.gz)
+0005.321 (0) Table hsd_19_comments: Total expected rows (approximate): 1
+0005.323 (0) Table hsd_19_comments: Total rows added: 1 in 0.00 seconds
+0005.324 (0) Table hsd_19_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_comments.table.gz)
+0005.327 (0) Table hsd_19_layerslider: Total expected rows (approximate): 0
+0005.328 (0) Table hsd_19_layerslider: Total rows added: 0 in 0.00 seconds
+0005.329 (0) Table hsd_19_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_layerslider.table.gz)
+0005.332 (0) Table hsd_19_links: Total expected rows (approximate): 0
+0005.334 (0) Table hsd_19_links: Total rows added: 0 in 0.00 seconds
+0005.335 (0) Table hsd_19_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_links.table.gz)
+0005.338 (0) Table hsd_19_options: Total expected rows (approximate): 190
+0005.372 (0) Table hsd_19_options: Total rows added: 322 in 0.04 seconds
+0005.373 (0) Table hsd_19_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_options.table.gz)
+0005.376 (0) Table hsd_19_postmeta: Total expected rows (approximate): 13
+0005.378 (0) Table hsd_19_postmeta: Total rows added: 13 in 0.00 seconds
+0005.379 (0) Table hsd_19_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_postmeta.table.gz)
+0005.382 (0) Table hsd_19_posts: Total expected rows (approximate): 4
+0005.385 (0) Table hsd_19_posts: Total rows added: 4 in 0.00 seconds
+0005.386 (0) Table hsd_19_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_posts.table.gz)
+0005.389 (0) Table hsd_19_term_relationships: Total expected rows (approximate): 1
+0005.391 (0) Table hsd_19_term_relationships: Total rows added: 1 in 0.00 seconds
+0005.392 (0) Table hsd_19_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_term_relationships.table.gz)
+0005.395 (0) Table hsd_19_term_taxonomy: Total expected rows (approximate): 1
+0005.396 (0) Table hsd_19_term_taxonomy: Total rows added: 1 in 0.00 seconds
+0005.397 (0) Table hsd_19_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_term_taxonomy.table.gz)
+0005.400 (0) Table hsd_19_terms: Total expected rows (approximate): 1
+0005.402 (0) Table hsd_19_terms: Total rows added: 1 in 0.00 seconds
+0005.403 (0) Table hsd_19_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_terms.table.gz)
+0005.405 (0) Table hsd_2_commentmeta: Total expected rows (approximate): 0
+0005.407 (0) Table hsd_2_commentmeta: Total rows added: 0 in 0.00 seconds
+0005.408 (0) Table hsd_2_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_commentmeta.table.gz)
+0005.411 (0) Table hsd_2_comments: Total expected rows (approximate): 1
+0005.413 (0) Table hsd_2_comments: Total rows added: 1 in 0.00 seconds
+0005.414 (0) Table hsd_2_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_comments.table.gz)
+0005.417 (0) Table hsd_2_layerslider: Total expected rows (approximate): 1
+0005.419 (0) Table hsd_2_layerslider: Total rows added: 1 in 0.00 seconds
+0005.420 (0) Table hsd_2_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_layerslider.table.gz)
+0005.423 (0) Table hsd_2_links: Total expected rows (approximate): 0
+0005.424 (0) Table hsd_2_links: Total rows added: 0 in 0.00 seconds
+0005.426 (0) Table hsd_2_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_links.table.gz)
+0005.429 (0) Table hsd_2_options: Total expected rows (approximate): 201
+0005.468 (0) Table hsd_2_options: Total rows added: 354 in 0.04 seconds
+0005.470 (0) Table hsd_2_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_options.table.gz)
+0005.473 (0) Table hsd_2_postmeta: Total expected rows (approximate): 37
+0005.476 (0) Table hsd_2_postmeta: Total rows added: 37 in 0.01 seconds
+0005.477 (0) Table hsd_2_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_postmeta.table.gz)
+0005.481 (0) Table hsd_2_posts: Total expected rows (approximate): 8
+0005.485 (0) Table hsd_2_posts: Total rows added: 8 in 0.01 seconds
+0005.486 (0) Table hsd_2_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_posts.table.gz)
+0005.489 (0) Table hsd_2_term_relationships: Total expected rows (approximate): 3
+0005.491 (0) Table hsd_2_term_relationships: Total rows added: 3 in 0.00 seconds
+0005.492 (0) Table hsd_2_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_term_relationships.table.gz)
+0005.495 (0) Table hsd_2_term_taxonomy: Total expected rows (approximate): 3
+0005.497 (0) Table hsd_2_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0005.498 (0) Table hsd_2_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_term_taxonomy.table.gz)
+0005.500 (0) Table hsd_2_terms: Total expected rows (approximate): 3
+0005.503 (0) Table hsd_2_terms: Total rows added: 3 in 0.00 seconds
+0005.504 (0) Table hsd_2_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_terms.table.gz)
+0005.507 (0) Table hsd_3_layerslider: Total expected rows (approximate): 1
+0005.508 (0) Table hsd_3_layerslider: Total rows added: 1 in 0.00 seconds
+0005.510 (0) Table hsd_3_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_3_layerslider.table.gz)
+0005.513 (0) Table hsd_4_commentmeta: Total expected rows (approximate): 0
+0005.514 (0) Table hsd_4_commentmeta: Total rows added: 0 in 0.00 seconds
+0005.515 (0) Table hsd_4_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_commentmeta.table.gz)
+0005.518 (0) Table hsd_4_comments: Total expected rows (approximate): 1
+0005.520 (0) Table hsd_4_comments: Total rows added: 1 in 0.00 seconds
+0005.521 (0) Table hsd_4_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_comments.table.gz)
+0005.524 (0) Table hsd_4_layerslider: Total expected rows (approximate): 6
+0005.529 (0) Table hsd_4_layerslider: Total rows added: 6 in 0.01 seconds
+0005.531 (0) Table hsd_4_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_layerslider.table.gz)
+0005.534 (0) Table hsd_4_links: Total expected rows (approximate): 0
+0005.535 (0) Table hsd_4_links: Total rows added: 0 in 0.00 seconds
+0005.537 (0) Table hsd_4_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_links.table.gz)
+0005.540 (0) Table hsd_4_options: Total expected rows (approximate): 1044
+0005.579 (0) Table hsd_4_options: Total rows added: 360 in 0.04 seconds
+0005.581 (0) Table hsd_4_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_options.table.gz)
+0005.584 (0) Table hsd_4_postmeta: Total expected rows (approximate): 87
+0005.589 (0) Table hsd_4_postmeta: Total rows added: 84 in 0.01 seconds
+0005.590 (0) Table hsd_4_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_postmeta.table.gz)
+0005.593 (0) Table hsd_4_posts: Total expected rows (approximate): 83
+0005.611 (0) Table hsd_4_posts: Total rows added: 82 in 0.02 seconds
+0005.612 (0) Table hsd_4_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_posts.table.gz)
+0005.615 (0) Table hsd_4_taxonomymeta: Total expected rows (approximate): 0
+0005.617 (0) Table hsd_4_taxonomymeta: Total rows added: 0 in 0.00 seconds
+0005.618 (0) Table hsd_4_taxonomymeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_taxonomymeta.table.gz)
+0005.621 (0) Table hsd_4_term_relationships: Total expected rows (approximate): 4
+0005.622 (0) Table hsd_4_term_relationships: Total rows added: 4 in 0.00 seconds
+0005.623 (0) Table hsd_4_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_term_relationships.table.gz)
+0005.626 (0) Table hsd_4_term_taxonomy: Total expected rows (approximate): 4
+0005.628 (0) Table hsd_4_term_taxonomy: Total rows added: 4 in 0.00 seconds
+0005.629 (0) Table hsd_4_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_term_taxonomy.table.gz)
+0005.632 (0) Table hsd_4_terms: Total expected rows (approximate): 4
+0005.633 (0) Table hsd_4_terms: Total rows added: 4 in 0.00 seconds
+0005.635 (0) Table hsd_4_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_terms.table.gz)
+0005.637 (0) Table hsd_5_commentmeta: Total expected rows (approximate): 0
+0005.639 (0) Table hsd_5_commentmeta: Total rows added: 0 in 0.00 seconds
+0005.640 (0) Table hsd_5_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_commentmeta.table.gz)
+0005.643 (0) Table hsd_5_comments: Total expected rows (approximate): 1
+0005.645 (0) Table hsd_5_comments: Total rows added: 1 in 0.00 seconds
+0005.646 (0) Table hsd_5_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_comments.table.gz)
+0005.649 (0) Table hsd_5_layerslider: Total expected rows (approximate): 1
+0005.651 (0) Table hsd_5_layerslider: Total rows added: 1 in 0.00 seconds
+0005.652 (0) Table hsd_5_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_layerslider.table.gz)
+0005.655 (0) Table hsd_5_links: Total expected rows (approximate): 0
+0005.657 (0) Table hsd_5_links: Total rows added: 0 in 0.00 seconds
+0005.658 (0) Table hsd_5_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_links.table.gz)
+0005.661 (0) Table hsd_5_options: Total expected rows (approximate): 841
+0005.701 (0) Table hsd_5_options: Total rows added: 351 in 0.04 seconds
+0005.703 (0) Table hsd_5_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_options.table.gz)
+0005.706 (0) Table hsd_5_postmeta: Total expected rows (approximate): 21
+0005.708 (0) Table hsd_5_postmeta: Total rows added: 21 in 0.00 seconds
+0005.709 (0) Table hsd_5_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_postmeta.table.gz)
+0005.713 (0) Table hsd_5_posts: Total expected rows (approximate): 7
+0005.716 (0) Table hsd_5_posts: Total rows added: 7 in 0.01 seconds
+0005.717 (0) Table hsd_5_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_posts.table.gz)
+0005.720 (0) Table hsd_5_term_relationships: Total expected rows (approximate): 1
+0005.721 (0) Table hsd_5_term_relationships: Total rows added: 1 in 0.00 seconds
+0005.723 (0) Table hsd_5_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_term_relationships.table.gz)
+0005.725 (0) Table hsd_5_term_taxonomy: Total expected rows (approximate): 1
+0005.727 (0) Table hsd_5_term_taxonomy: Total rows added: 1 in 0.00 seconds
+0005.728 (0) Table hsd_5_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_term_taxonomy.table.gz)
+0005.731 (0) Table hsd_5_terms: Total expected rows (approximate): 1
+0005.733 (0) Table hsd_5_terms: Total rows added: 1 in 0.00 seconds
+0005.734 (0) Table hsd_5_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_terms.table.gz)
+0005.737 (0) Table hsd_6_commentmeta: Total expected rows (approximate): 0
+0005.738 (0) Table hsd_6_commentmeta: Total rows added: 0 in 0.00 seconds
+0005.739 (0) Table hsd_6_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_commentmeta.table.gz)
+0005.742 (0) Table hsd_6_comments: Total expected rows (approximate): 1
+0005.744 (0) Table hsd_6_comments: Total rows added: 1 in 0.00 seconds
+0005.745 (0) Table hsd_6_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_comments.table.gz)
+0005.748 (0) Table hsd_6_layerslider: Total expected rows (approximate): 1
+0005.750 (0) Table hsd_6_layerslider: Total rows added: 1 in 0.00 seconds
+0005.751 (0) Table hsd_6_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_layerslider.table.gz)
+0005.754 (0) Table hsd_6_links: Total expected rows (approximate): 0
+0005.755 (0) Table hsd_6_links: Total rows added: 0 in 0.00 seconds
+0005.756 (0) Table hsd_6_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_links.table.gz)
+0005.759 (0) Table hsd_6_options: Total expected rows (approximate): 244
+0005.799 (0) Table hsd_6_options: Total rows added: 351 in 0.04 seconds
+0005.801 (0) Table hsd_6_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_options.table.gz)
+0005.803 (0) Table hsd_6_postmeta: Total expected rows (approximate): 37
+0005.806 (0) Table hsd_6_postmeta: Total rows added: 37 in 0.00 seconds
+0005.807 (0) Table hsd_6_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_postmeta.table.gz)
+0005.811 (0) Table hsd_6_posts: Total expected rows (approximate): 9
+0005.814 (0) Table hsd_6_posts: Total rows added: 9 in 0.01 seconds
+0005.816 (0) Table hsd_6_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_posts.table.gz)
+0005.818 (0) Table hsd_6_term_relationships: Total expected rows (approximate): 3
+0005.820 (0) Table hsd_6_term_relationships: Total rows added: 3 in 0.00 seconds
+0005.821 (0) Table hsd_6_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_term_relationships.table.gz)
+0005.824 (0) Table hsd_6_term_taxonomy: Total expected rows (approximate): 3
+0005.826 (0) Table hsd_6_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0005.827 (0) Table hsd_6_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_term_taxonomy.table.gz)
+0005.829 (0) Table hsd_6_terms: Total expected rows (approximate): 3
+0005.831 (0) Table hsd_6_terms: Total rows added: 3 in 0.00 seconds
+0005.832 (0) Table hsd_6_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_terms.table.gz)
+0005.835 (0) Table hsd_7_commentmeta: Total expected rows (approximate): 0
+0005.836 (0) Table hsd_7_commentmeta: Total rows added: 0 in 0.00 seconds
+0005.838 (0) Table hsd_7_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_commentmeta.table.gz)
+0005.841 (0) Table hsd_7_comments: Total expected rows (approximate): 1
+0005.843 (0) Table hsd_7_comments: Total rows added: 1 in 0.00 seconds
+0005.844 (0) Table hsd_7_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_comments.table.gz)
+0005.846 (0) Table hsd_7_layerslider: Total expected rows (approximate): 1
+0005.848 (0) Table hsd_7_layerslider: Total rows added: 1 in 0.00 seconds
+0005.850 (0) Table hsd_7_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_layerslider.table.gz)
+0005.853 (0) Table hsd_7_links: Total expected rows (approximate): 0
+0005.854 (0) Table hsd_7_links: Total rows added: 0 in 0.00 seconds
+0005.855 (0) Table hsd_7_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_links.table.gz)
+0005.858 (0) Table hsd_7_options: Total expected rows (approximate): 851
+0005.898 (0) Table hsd_7_options: Total rows added: 353 in 0.04 seconds
+0005.900 (0) Table hsd_7_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_options.table.gz)
+0005.903 (0) Table hsd_7_postmeta: Total expected rows (approximate): 37
+0005.906 (0) Table hsd_7_postmeta: Total rows added: 37 in 0.00 seconds
+0005.907 (0) Table hsd_7_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_postmeta.table.gz)
+0005.911 (0) Table hsd_7_posts: Total expected rows (approximate): 8
+0005.914 (0) Table hsd_7_posts: Total rows added: 8 in 0.01 seconds
+0005.915 (0) Table hsd_7_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_posts.table.gz)
+0005.918 (0) Table hsd_7_term_relationships: Total expected rows (approximate): 3
+0005.920 (0) Table hsd_7_term_relationships: Total rows added: 3 in 0.00 seconds
+0005.921 (0) Table hsd_7_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_term_relationships.table.gz)
+0005.924 (0) Table hsd_7_term_taxonomy: Total expected rows (approximate): 3
+0005.926 (0) Table hsd_7_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0005.927 (0) Table hsd_7_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_term_taxonomy.table.gz)
+0005.930 (0) Table hsd_7_terms: Total expected rows (approximate): 3
+0005.932 (0) Table hsd_7_terms: Total rows added: 3 in 0.00 seconds
+0005.933 (0) Table hsd_7_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_terms.table.gz)
+0005.935 (0) Table hsd_8_commentmeta: Total expected rows (approximate): 0
+0005.937 (0) Table hsd_8_commentmeta: Total rows added: 0 in 0.00 seconds
+0005.938 (0) Table hsd_8_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_commentmeta.table.gz)
+0005.941 (0) Table hsd_8_comments: Total expected rows (approximate): 1
+0005.943 (0) Table hsd_8_comments: Total rows added: 1 in 0.00 seconds
+0005.944 (0) Table hsd_8_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_comments.table.gz)
+0005.947 (0) Table hsd_8_layerslider: Total expected rows (approximate): 1
+0005.949 (0) Table hsd_8_layerslider: Total rows added: 1 in 0.00 seconds
+0005.950 (0) Table hsd_8_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_layerslider.table.gz)
+0005.953 (0) Table hsd_8_links: Total expected rows (approximate): 0
+0005.954 (0) Table hsd_8_links: Total rows added: 0 in 0.00 seconds
+0005.955 (0) Table hsd_8_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_links.table.gz)
+0005.958 (0) Table hsd_8_options: Total expected rows (approximate): 487
+0005.998 (0) Table hsd_8_options: Total rows added: 354 in 0.04 seconds
+0006.000 (0) Table hsd_8_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_options.table.gz)
+0006.003 (0) Table hsd_8_postmeta: Total expected rows (approximate): 37
+0006.006 (0) Table hsd_8_postmeta: Total rows added: 37 in 0.00 seconds
+0006.007 (0) Table hsd_8_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_postmeta.table.gz)
+0006.010 (0) Table hsd_8_posts: Total expected rows (approximate): 9
+0006.014 (0) Table hsd_8_posts: Total rows added: 9 in 0.01 seconds
+0006.015 (0) Table hsd_8_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_posts.table.gz)
+0006.018 (0) Table hsd_8_term_relationships: Total expected rows (approximate): 3
+0006.020 (0) Table hsd_8_term_relationships: Total rows added: 3 in 0.00 seconds
+0006.021 (0) Table hsd_8_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_term_relationships.table.gz)
+0006.024 (0) Table hsd_8_term_taxonomy: Total expected rows (approximate): 3
+0006.026 (0) Table hsd_8_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0006.027 (0) Table hsd_8_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_term_taxonomy.table.gz)
+0006.029 (0) Table hsd_8_terms: Total expected rows (approximate): 3
+0006.031 (0) Table hsd_8_terms: Total rows added: 3 in 0.00 seconds
+0006.032 (0) Table hsd_8_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_terms.table.gz)
+0006.035 (0) Table hsd_9_commentmeta: Total expected rows (approximate): 0
+0006.036 (0) Table hsd_9_commentmeta: Total rows added: 0 in 0.00 seconds
+0006.038 (0) Table hsd_9_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_commentmeta.table.gz)
+0006.041 (0) Table hsd_9_comments: Total expected rows (approximate): 1
+0006.043 (0) Table hsd_9_comments: Total rows added: 1 in 0.00 seconds
+0006.044 (0) Table hsd_9_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_comments.table.gz)
+0006.047 (0) Table hsd_9_layerslider: Total expected rows (approximate): 1
+0006.048 (0) Table hsd_9_layerslider: Total rows added: 1 in 0.00 seconds
+0006.050 (0) Table hsd_9_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_layerslider.table.gz)
+0006.053 (0) Table hsd_9_links: Total expected rows (approximate): 0
+0006.054 (0) Table hsd_9_links: Total rows added: 0 in 0.00 seconds
+0006.055 (0) Table hsd_9_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_links.table.gz)
+0006.058 (0) Table hsd_9_options: Total expected rows (approximate): 291
+0006.101 (0) Table hsd_9_options: Total rows added: 356 in 0.04 seconds
+0006.103 (0) Table hsd_9_options: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_options.table.gz)
+0006.106 (0) Table hsd_9_postmeta: Total expected rows (approximate): 37
+0006.110 (0) Table hsd_9_postmeta: Total rows added: 37 in 0.01 seconds
+0006.111 (0) Table hsd_9_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_postmeta.table.gz)
+0006.114 (0) Table hsd_9_posts: Total expected rows (approximate): 9
+0006.118 (0) Table hsd_9_posts: Total rows added: 9 in 0.01 seconds
+0006.120 (0) Table hsd_9_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_posts.table.gz)
+0006.123 (0) Table hsd_9_term_relationships: Total expected rows (approximate): 3
+0006.125 (0) Table hsd_9_term_relationships: Total rows added: 3 in 0.00 seconds
+0006.126 (0) Table hsd_9_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_term_relationships.table.gz)
+0006.129 (0) Table hsd_9_term_taxonomy: Total expected rows (approximate): 3
+0006.131 (0) Table hsd_9_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0006.132 (0) Table hsd_9_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_term_taxonomy.table.gz)
+0006.135 (0) Table hsd_9_terms: Total expected rows (approximate): 3
+0006.136 (0) Table hsd_9_terms: Total rows added: 3 in 0.00 seconds
+0006.138 (0) Table hsd_9_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_terms.table.gz)
+0006.140 (0) Table hsd_blog_versions: Total expected rows (approximate): 16
+0006.143 (0) Table hsd_blog_versions: Total rows added: 16 in 0.00 seconds
+0006.144 (0) Table hsd_blog_versions: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_blog_versions.table.gz)
+0006.147 (0) Table hsd_blogs: Total expected rows (approximate): 18
+0006.150 (0) Table hsd_blogs: Total rows added: 18 in 0.01 seconds
+0006.152 (0) Table hsd_blogs: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_blogs.table.gz)
+0006.155 (0) Table hsd_commentmeta: Total expected rows (approximate): 0
+0006.156 (0) Table hsd_commentmeta: Total rows added: 0 in 0.00 seconds
+0006.157 (0) Table hsd_commentmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_commentmeta.table.gz)
+0006.160 (0) Table hsd_comments: Total expected rows (approximate): 1
+0006.163 (0) Table hsd_comments: Total rows added: 1 in 0.00 seconds
+0006.164 (0) Table hsd_comments: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_comments.table.gz)
+0006.166 (0) Table hsd_layerslider: Total expected rows (approximate): 1
+0006.168 (0) Table hsd_layerslider: Total rows added: 1 in 0.00 seconds
+0006.170 (0) Table hsd_layerslider: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_layerslider.table.gz)
+0006.173 (0) Table hsd_links: Total expected rows (approximate): 0
+0006.174 (0) Table hsd_links: Total rows added: 0 in 0.00 seconds
+0006.175 (0) Table hsd_links: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_links.table.gz)
+0006.178 (0) Table hsd_postmeta: Total expected rows (approximate): 62
+0006.182 (0) Table hsd_postmeta: Total rows added: 62 in 0.01 seconds
+0006.183 (0) Table hsd_postmeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_postmeta.table.gz)
+0006.187 (0) Table hsd_posts: Total expected rows (approximate): 20
+0006.193 (0) Table hsd_posts: Total rows added: 20 in 0.01 seconds
+0006.194 (0) Table hsd_posts: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_posts.table.gz)
+0006.197 (0) Table hsd_registration_log: Total expected rows (approximate): 18
+0006.200 (0) Table hsd_registration_log: Total rows added: 18 in 0.00 seconds
+0006.201 (0) Table hsd_registration_log: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_registration_log.table.gz)
+0006.204 (0) Table hsd_signups: Total expected rows (approximate): 2
+0006.205 (0) Table hsd_signups: Total rows added: 2 in 0.00 seconds
+0006.207 (0) Table hsd_signups: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_signups.table.gz)
+0006.209 (0) Table hsd_site: Total expected rows (approximate): 11
+0006.211 (0) Table hsd_site: Total rows added: 11 in 0.00 seconds
+0006.212 (0) Table hsd_site: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_site.table.gz)
+0006.215 (0) Table hsd_sitemeta: Total expected rows (approximate): 455
+0006.241 (0) Table hsd_sitemeta: Total rows added: 386 in 0.03 seconds
+0006.243 (0) Table hsd_sitemeta: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_sitemeta.table.gz)
+0006.246 (0) Table hsd_term_relationships: Total expected rows (approximate): 4
+0006.247 (0) Table hsd_term_relationships: Total rows added: 4 in 0.00 seconds
+0006.248 (0) Table hsd_term_relationships: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_term_relationships.table.gz)
+0006.252 (0) Table hsd_term_taxonomy: Total expected rows (approximate): 3
+0006.253 (0) Table hsd_term_taxonomy: Total rows added: 3 in 0.00 seconds
+0006.255 (0) Table hsd_term_taxonomy: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_term_taxonomy.table.gz)
+0006.258 (0) Table hsd_terms: Total expected rows (approximate): 3
+0006.260 (0) Table hsd_terms: Total rows added: 3 in 0.00 seconds
+0006.261 (0) Table hsd_terms: finishing file (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_terms.table.gz)
+0006.262 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_options.table.gz: adding to final database dump
+0006.294 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_users.table.gz: adding to final database dump
+0006.296 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_usermeta.table.gz: adding to final database dump
+0006.300 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_commentmeta.table.gz: adding to final database dump
+0006.301 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_comments.table.gz: adding to final database dump
+0006.303 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_layerslider.table.gz: adding to final database dump
+0006.304 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_links.table.gz: adding to final database dump
+0006.306 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_options.table.gz: adding to final database dump
+0006.339 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_postmeta.table.gz: adding to final database dump
+0006.341 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_posts.table.gz: adding to final database dump
+0006.343 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_term_relationships.table.gz: adding to final database dump
+0006.344 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_term_taxonomy.table.gz: adding to final database dump
+0006.346 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_10_terms.table.gz: adding to final database dump
+0006.347 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_commentmeta.table.gz: adding to final database dump
+0006.348 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_comments.table.gz: adding to final database dump
+0006.350 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_layerslider.table.gz: adding to final database dump
+0006.351 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_links.table.gz: adding to final database dump
+0006.352 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_options.table.gz: adding to final database dump
+0006.386 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_postmeta.table.gz: adding to final database dump
+0006.388 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_posts.table.gz: adding to final database dump
+0006.390 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_term_relationships.table.gz: adding to final database dump
+0006.391 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_term_taxonomy.table.gz: adding to final database dump
+0006.392 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_11_terms.table.gz: adding to final database dump
+0006.394 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_commentmeta.table.gz: adding to final database dump
+0006.395 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_comments.table.gz: adding to final database dump
+0006.396 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_layerslider.table.gz: adding to final database dump
+0006.398 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_links.table.gz: adding to final database dump
+0006.399 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_options.table.gz: adding to final database dump
+0006.431 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_postmeta.table.gz: adding to final database dump
+0006.433 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_posts.table.gz: adding to final database dump
+0006.435 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_term_relationships.table.gz: adding to final database dump
+0006.437 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_term_taxonomy.table.gz: adding to final database dump
+0006.438 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_12_terms.table.gz: adding to final database dump
+0006.439 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_commentmeta.table.gz: adding to final database dump
+0006.440 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_comments.table.gz: adding to final database dump
+0006.442 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_layerslider.table.gz: adding to final database dump
+0006.443 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_links.table.gz: adding to final database dump
+0006.445 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_options.table.gz: adding to final database dump
+0006.477 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_postmeta.table.gz: adding to final database dump
+0006.484 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_posts.table.gz: adding to final database dump
+0006.493 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_term_relationships.table.gz: adding to final database dump
+0006.495 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_term_taxonomy.table.gz: adding to final database dump
+0006.496 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_13_terms.table.gz: adding to final database dump
+0006.497 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_commentmeta.table.gz: adding to final database dump
+0006.499 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_comments.table.gz: adding to final database dump
+0006.500 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_layerslider.table.gz: adding to final database dump
+0006.502 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_links.table.gz: adding to final database dump
+0006.503 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_options.table.gz: adding to final database dump
+0006.535 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_postmeta.table.gz: adding to final database dump
+0006.538 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_posts.table.gz: adding to final database dump
+0006.541 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_term_relationships.table.gz: adding to final database dump
+0006.543 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_term_taxonomy.table.gz: adding to final database dump
+0006.544 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_14_terms.table.gz: adding to final database dump
+0006.545 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_commentmeta.table.gz: adding to final database dump
+0006.547 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_comments.table.gz: adding to final database dump
+0006.548 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_layerslider.table.gz: adding to final database dump
+0006.550 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_links.table.gz: adding to final database dump
+0006.551 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_options.table.gz: adding to final database dump
+0006.583 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_postmeta.table.gz: adding to final database dump
+0006.586 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_posts.table.gz: adding to final database dump
+0006.589 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_term_relationships.table.gz: adding to final database dump
+0006.591 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_term_taxonomy.table.gz: adding to final database dump
+0006.592 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_15_terms.table.gz: adding to final database dump
+0006.593 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_commentmeta.table.gz: adding to final database dump
+0006.595 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_comments.table.gz: adding to final database dump
+0006.596 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_layerslider.table.gz: adding to final database dump
+0006.597 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_links.table.gz: adding to final database dump
+0006.599 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_options.table.gz: adding to final database dump
+0006.629 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_postmeta.table.gz: adding to final database dump
+0006.631 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_posts.table.gz: adding to final database dump
+0006.633 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_term_relationships.table.gz: adding to final database dump
+0006.635 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_term_taxonomy.table.gz: adding to final database dump
+0006.636 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_16_terms.table.gz: adding to final database dump
+0006.637 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_commentmeta.table.gz: adding to final database dump
+0006.640 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_comments.table.gz: adding to final database dump
+0006.645 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_layerslider.table.gz: adding to final database dump
+0006.646 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_links.table.gz: adding to final database dump
+0006.647 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_options.table.gz: adding to final database dump
+0006.674 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_postmeta.table.gz: adding to final database dump
+0006.714 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_posts.table.gz: adding to final database dump
+0006.728 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_term_relationships.table.gz: adding to final database dump
+0006.731 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_term_taxonomy.table.gz: adding to final database dump
+0006.733 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_17_terms.table.gz: adding to final database dump
+0006.734 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_commentmeta.table.gz: adding to final database dump
+0006.736 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_comments.table.gz: adding to final database dump
+0006.737 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_layerslider.table.gz: adding to final database dump
+0006.739 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_links.table.gz: adding to final database dump
+0006.740 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_options.table.gz: adding to final database dump
+0006.771 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_postmeta.table.gz: adding to final database dump
+0006.775 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_posts.table.gz: adding to final database dump
+0006.778 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_term_relationships.table.gz: adding to final database dump
+0006.780 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_term_taxonomy.table.gz: adding to final database dump
+0006.781 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_18_terms.table.gz: adding to final database dump
+0006.783 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_commentmeta.table.gz: adding to final database dump
+0006.784 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_comments.table.gz: adding to final database dump
+0006.786 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_layerslider.table.gz: adding to final database dump
+0006.787 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_links.table.gz: adding to final database dump
+0006.788 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_options.table.gz: adding to final database dump
+0006.817 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_postmeta.table.gz: adding to final database dump
+0006.819 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_posts.table.gz: adding to final database dump
+0006.821 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_term_relationships.table.gz: adding to final database dump
+0006.823 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_term_taxonomy.table.gz: adding to final database dump
+0006.824 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_19_terms.table.gz: adding to final database dump
+0006.825 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_commentmeta.table.gz: adding to final database dump
+0006.827 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_comments.table.gz: adding to final database dump
+0006.828 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_layerslider.table.gz: adding to final database dump
+0006.830 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_links.table.gz: adding to final database dump
+0006.831 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_options.table.gz: adding to final database dump
+0006.867 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_postmeta.table.gz: adding to final database dump
+0006.868 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_posts.table.gz: adding to final database dump
+0006.871 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_term_relationships.table.gz: adding to final database dump
+0006.872 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_term_taxonomy.table.gz: adding to final database dump
+0006.873 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_2_terms.table.gz: adding to final database dump
+0006.875 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_3_layerslider.table.gz: adding to final database dump
+0006.876 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_commentmeta.table.gz: adding to final database dump
+0006.878 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_comments.table.gz: adding to final database dump
+0006.879 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_layerslider.table.gz: adding to final database dump
+0006.885 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_links.table.gz: adding to final database dump
+0006.886 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_options.table.gz: adding to final database dump
+0006.921 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_postmeta.table.gz: adding to final database dump
+0006.924 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_posts.table.gz: adding to final database dump
+0006.928 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_taxonomymeta.table.gz: adding to final database dump
+0006.930 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_term_relationships.table.gz: adding to final database dump
+0006.931 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_term_taxonomy.table.gz: adding to final database dump
+0006.932 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_4_terms.table.gz: adding to final database dump
+0006.934 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_commentmeta.table.gz: adding to final database dump
+0006.935 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_comments.table.gz: adding to final database dump
+0006.936 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_layerslider.table.gz: adding to final database dump
+0006.938 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_links.table.gz: adding to final database dump
+0006.939 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_options.table.gz: adding to final database dump
+0006.974 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_postmeta.table.gz: adding to final database dump
+0006.976 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_posts.table.gz: adding to final database dump
+0006.978 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_term_relationships.table.gz: adding to final database dump
+0006.979 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_term_taxonomy.table.gz: adding to final database dump
+0006.981 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_5_terms.table.gz: adding to final database dump
+0006.982 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_commentmeta.table.gz: adding to final database dump
+0006.983 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_comments.table.gz: adding to final database dump
+0006.985 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_layerslider.table.gz: adding to final database dump
+0006.987 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_links.table.gz: adding to final database dump
+0006.988 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_options.table.gz: adding to final database dump
+0007.022 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_postmeta.table.gz: adding to final database dump
+0007.025 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_posts.table.gz: adding to final database dump
+0007.027 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_term_relationships.table.gz: adding to final database dump
+0007.028 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_term_taxonomy.table.gz: adding to final database dump
+0007.029 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_6_terms.table.gz: adding to final database dump
+0007.031 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_commentmeta.table.gz: adding to final database dump
+0007.032 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_comments.table.gz: adding to final database dump
+0007.033 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_layerslider.table.gz: adding to final database dump
+0007.035 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_links.table.gz: adding to final database dump
+0007.036 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_options.table.gz: adding to final database dump
+0007.072 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_postmeta.table.gz: adding to final database dump
+0007.074 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_posts.table.gz: adding to final database dump
+0007.076 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_term_relationships.table.gz: adding to final database dump
+0007.078 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_term_taxonomy.table.gz: adding to final database dump
+0007.079 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_7_terms.table.gz: adding to final database dump
+0007.080 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_commentmeta.table.gz: adding to final database dump
+0007.082 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_comments.table.gz: adding to final database dump
+0007.083 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_layerslider.table.gz: adding to final database dump
+0007.085 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_links.table.gz: adding to final database dump
+0007.087 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_options.table.gz: adding to final database dump
+0007.120 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_postmeta.table.gz: adding to final database dump
+0007.122 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_posts.table.gz: adding to final database dump
+0007.124 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_term_relationships.table.gz: adding to final database dump
+0007.125 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_term_taxonomy.table.gz: adding to final database dump
+0007.127 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_8_terms.table.gz: adding to final database dump
+0007.128 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_commentmeta.table.gz: adding to final database dump
+0007.129 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_comments.table.gz: adding to final database dump
+0007.131 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_layerslider.table.gz: adding to final database dump
+0007.132 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_links.table.gz: adding to final database dump
+0007.134 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_options.table.gz: adding to final database dump
+0007.169 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_postmeta.table.gz: adding to final database dump
+0007.171 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_posts.table.gz: adding to final database dump
+0007.172 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_term_relationships.table.gz: adding to final database dump
+0007.174 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_term_taxonomy.table.gz: adding to final database dump
+0007.175 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_9_terms.table.gz: adding to final database dump
+0007.176 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_blog_versions.table.gz: adding to final database dump
+0007.178 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_blogs.table.gz: adding to final database dump
+0007.179 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_commentmeta.table.gz: adding to final database dump
+0007.180 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_comments.table.gz: adding to final database dump
+0007.182 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_layerslider.table.gz: adding to final database dump
+0007.183 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_links.table.gz: adding to final database dump
+0007.185 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_postmeta.table.gz: adding to final database dump
+0007.187 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_posts.table.gz: adding to final database dump
+0007.188 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_registration_log.table.gz: adding to final database dump
+0007.190 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_signups.table.gz: adding to final database dump
+0007.191 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_site.table.gz: adding to final database dump
+0007.193 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_sitemeta.table.gz: adding to final database dump
+0007.208 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_term_relationships.table.gz: adding to final database dump
+0007.209 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_term_taxonomy.table.gz: adding to final database dump
+0007.211 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db-table-hsd_terms.table.gz: adding to final database dump
+0007.212 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz: finished writing out complete database file (1376 Kb)
+0007.219 (0) Total database tables backed up: 190
+0007.222 (0) Saving backup history
+0007.226 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0007.227 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0007.228 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0007.229 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip: others: This file has not yet been successfully uploaded: will queue
+0007.230 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz: db: This file has not yet been successfully uploaded: will queue
+0007.230 (0) Requesting backup of the files that were not successfully uploaded (5)
+0007.231 (0) Cloud backup selection: googledrive
+0007.234 (0) Beginning dispatch of backup to remote
+0007.237 (0) Google Drive: requesting access token: client_id=442752695175.apps.googleusercontent.com
+0007.478 (0) Google Drive: successfully obtained access token
+0247.669 (0) Google Drive quota usage: used=0 Mb, total=30720 Mb, available=30720 Mb
+0247.671 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip: Attempting to upload to Google Drive
+0247.672 (0) /srv/www/hermiston.k12.or.us/wp-content/updraft/backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip: Attempting to upload file to Google Drive.
+0000.000 () Opened log file at time: Mon, 24 Jun 2013 18:21:09 +0000
+0000.002 () UpdraftPlus: 1.6.17 WP: 3.5.2 PHP: 5.3.10-1ubuntu3.6 (Linux HSD-AS-01 3.2.0-29-generic #46-Ubuntu SMP Fri Jul 27 17:03:23 UTC 2012 x86_64) Server: Apache/2.2.22 (Ubuntu) max_execution_time: 900 memory_limit: 256M ZipArchive::addFile : Y
+0000.003 () Free space on disk containing Updraft's temporary directory: 2670473 Mb
+0000.004 (1) Backup run: resumption=1, nonce=ac7e3c82a793, begun at=1372097766 (303s ago), job type=backup, previous check-in=4.3s
+0000.005 (1) Scheduling a resumption (2) after 300 seconds (1372098369) in case this run gets aborted
+0000.007 (1) Creation of backups of directories: already finished
+0000.012 (1) Saving backup status to database (elements: 8)
+0000.015 (1) Database dump: Creation was completed already
+0000.016 (1) Saving backup history
+0000.020 (1) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0000.021 (1) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0000.022 (1) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0000.022 (1) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip: others: This file has not yet been successfully uploaded: will queue
+0000.023 (1) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz: db: This file has not yet been successfully uploaded: will queue
+0000.024 (1) Requesting backup of the files that were not successfully uploaded (5)
+0000.025 (1) Cloud backup selection: googledrive
+0000.028 (1) Beginning dispatch of backup to remote
+0000.031 (1) Google Drive: requesting access token: client_id=442752695175.apps.googleusercontent.com
+0000.175 (1) Google Drive: successfully obtained access token
+0240.370 (1) Google Drive quota usage: used=0 Mb, total=30720 Mb, available=30720 Mb
+0240.372 (1) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip: Attempting to upload to Google Drive
+0240.373 (1) /srv/www/hermiston.k12.or.us/wp-content/updraft/backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip: Attempting to upload file to Google Drive.
+0728.152 (0) GoogleDrive upload: an error occurred
+0728.154 (0) Error details: Received response code '400 Bad Request' while trying to get 'https://docs.google.com/feeds/upload/create-session/default/private/full?convert=false'.
+0728.155 (0) An error condition has occurred for the first time during this job
+0728.157 (0) ERROR: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip: Failed to upload to Google Drive
+0728.158 (0) Google Drive quota usage: used=0 Mb, total=30720 Mb, available=30720 Mb
+0728.159 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip: Attempting to upload to Google Drive
+0728.159 (0) /srv/www/hermiston.k12.or.us/wp-content/updraft/backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip: Attempting to upload file to Google Drive.
+0968.323 (0) GoogleDrive upload: an error occurred
+0968.325 (0) Error details: Received response code '400 Bad Request' while trying to get 'https://docs.google.com/feeds/upload/create-session/default/private/full?convert=false'.
+0968.326 (0) ERROR: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip: Failed to upload to Google Drive
+0968.327 (0) Google Drive quota usage: used=0 Mb, total=30720 Mb, available=30720 Mb
+0968.328 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-uploads.zip: Attempting to upload to Google Drive
+0968.329 (0) /srv/www/hermiston.k12.or.us/wp-content/updraft/backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-uploads.zip: Attempting to upload file to Google Drive.
+0721.053 (1) GoogleDrive upload: an error occurred
+0721.055 (1) Error details: Received response code '400 Bad Request' while trying to get 'https://docs.google.com/feeds/upload/create-session/default/private/full?convert=false'.
+0721.057 (1) An error condition has occurred for the first time during this job
+0721.058 (1) ERROR: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-plugins.zip: Failed to upload to Google Drive
+0721.058 (1) Google Drive quota usage: used=0 Mb, total=30720 Mb, available=30720 Mb
+0721.060 (1) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip: Attempting to upload to Google Drive
+0721.061 (1) /srv/www/hermiston.k12.or.us/wp-content/updraft/backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip: Attempting to upload file to Google Drive.
+1208.485 (0) GoogleDrive upload: an error occurred
+1208.487 (0) Error details: Received response code '400 Bad Request' while trying to get 'https://docs.google.com/feeds/upload/create-session/default/private/full?convert=false'.
+1208.488 (0) ERROR: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-uploads.zip: Failed to upload to Google Drive
+1208.489 (0) Google Drive quota usage: used=0 Mb, total=30720 Mb, available=30720 Mb
+1208.490 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip: Attempting to upload to Google Drive
+1208.492 (0) /srv/www/hermiston.k12.or.us/wp-content/updraft/backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip: Attempting to upload file to Google Drive.
+0961.223 (1) GoogleDrive upload: an error occurred
+0961.225 (1) Error details: Received response code '400 Bad Request' while trying to get 'https://docs.google.com/feeds/upload/create-session/default/private/full?convert=false'.
+0961.226 (1) ERROR: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-themes.zip: Failed to upload to Google Drive
+0961.227 (1) Google Drive quota usage: used=0 Mb, total=30720 Mb, available=30720 Mb
+0961.228 (1) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-uploads.zip: Attempting to upload to Google Drive
+0961.230 (1) /srv/www/hermiston.k12.or.us/wp-content/updraft/backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-uploads.zip: Attempting to upload file to Google Drive.
+1448.656 (0) GoogleDrive upload: an error occurred
+1448.658 (0) Error details: Received response code '400 Bad Request' while trying to get 'https://docs.google.com/feeds/upload/create-session/default/private/full?convert=false'.
+1448.659 (0) ERROR: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip: Failed to upload to Google Drive
+1448.661 (0) Google Drive quota usage: used=0 Mb, total=30720 Mb, available=30720 Mb
+1448.662 (0) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz: Attempting to upload to Google Drive
+1448.663 (0) /srv/www/hermiston.k12.or.us/wp-content/updraft/backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz: Attempting to upload file to Google Drive.
+1201.402 (1) GoogleDrive upload: an error occurred
+1201.404 (1) Error details: Received response code '400 Bad Request' while trying to get 'https://docs.google.com/feeds/upload/create-session/default/private/full?convert=false'.
+1201.405 (1) ERROR: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-uploads.zip: Failed to upload to Google Drive
+1201.406 (1) Google Drive quota usage: used=0 Mb, total=30720 Mb, available=30720 Mb
+1201.407 (1) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip: Attempting to upload to Google Drive
+1201.408 (1) /srv/www/hermiston.k12.or.us/wp-content/updraft/backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip: Attempting to upload file to Google Drive.
+1688.850 (0) GoogleDrive upload: an error occurred
+1688.852 (0) Error details: Received response code '400 Bad Request' while trying to get 'https://docs.google.com/feeds/upload/create-session/default/private/full?convert=false'.
+1688.854 (0) ERROR: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz: Failed to upload to Google Drive
+1688.855 (0) Retain: beginning examination of existing backup sets
+1688.856 (0) Retain files: user setting: number to retain = 5
+1688.856 (0) Retain db: user setting: number to retain = 5
+1688.858 (0) Number of backup sets in history: 3
+1688.859 (0) Examining backup set with datestamp: 1372097766
+1688.860 (0) 1372097766: this set includes a database (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz); db count is now 1
+1688.861 (0) 1372097766: this set includes files; fileset count is now 1
+1688.862 (0) 1372097766: this backup set remains non-empty; will retain in history
+1688.863 (0) Examining backup set with datestamp: 1372097704
+1688.864 (0) 1372097704: this set includes a database (backup_2013-06-24-1815_Hermiston_School_District_ee0dcb25dc04-db.gz); db count is now 2
+1688.865 (0) 1372097704: this set includes files; fileset count is now 2
+1688.866 (0) 1372097704: this backup set remains non-empty; will retain in history
+1688.867 (0) Examining backup set with datestamp: 1372087544
+1688.867 (0) 1372087544: this set includes a database (backup_2013-06-24-1525_Hermiston_School_District_3f10e0d55170-db.gz); db count is now 3
+1688.868 (0) 1372087544: this set includes files; fileset count is now 3
+1688.869 (0) 1372087544: this backup set remains non-empty; will retain in history
+1688.870 (0) Retain: saving new backup history (sets now: 3) and finishing retain operation
+1688.872 (0) Resume backup (ac7e3c82a793, 0): finish run
+1688.874 (0) There were errors in the uploads, so the 'resume' event is remaining scheduled
+1688.875 (0) The backup has not finished; a resumption is scheduled within 5 minutes
+1441.573 (1) GoogleDrive upload: an error occurred
+1441.574 (1) Error details: Received response code '400 Bad Request' while trying to get 'https://docs.google.com/feeds/upload/create-session/default/private/full?convert=false'.
+1441.576 (1) ERROR: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-others.zip: Failed to upload to Google Drive
+1441.577 (1) Google Drive quota usage: used=0 Mb, total=30720 Mb, available=30720 Mb
+1441.577 (1) backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz: Attempting to upload to Google Drive
+1441.578 (1) /srv/www/hermiston.k12.or.us/wp-content/updraft/backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz: Attempting to upload file to Google Drive.
+1681.767 (1) GoogleDrive upload: an error occurred
+1681.769 (1) Error details: Received response code '400 Bad Request' while trying to get 'https://docs.google.com/feeds/upload/create-session/default/private/full?convert=false'.
+1681.770 (1) ERROR: backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz: Failed to upload to Google Drive
+1681.771 (1) Retain: beginning examination of existing backup sets
+1681.772 (1) Retain files: user setting: number to retain = 5
+1681.773 (1) Retain db: user setting: number to retain = 5
+1681.774 (1) Number of backup sets in history: 3
+1681.776 (1) Examining backup set with datestamp: 1372097766
+1681.777 (1) 1372097766: this set includes a database (backup_2013-06-24-1816_Hermiston_School_District_ac7e3c82a793-db.gz); db count is now 1
+1681.778 (1) 1372097766: this set includes files; fileset count is now 1
+1681.779 (1) 1372097766: this backup set remains non-empty; will retain in history
+1681.779 (1) Examining backup set with datestamp: 1372097704
+1681.781 (1) 1372097704: this set includes a database (backup_2013-06-24-1815_Hermiston_School_District_ee0dcb25dc04-db.gz); db count is now 2
+1681.782 (1) 1372097704: this set includes files; fileset count is now 2
+1681.783 (1) 1372097704: this backup set remains non-empty; will retain in history
+1681.783 (1) Examining backup set with datestamp: 1372087544
+1681.785 (1) 1372087544: this set includes a database (backup_2013-06-24-1525_Hermiston_School_District_3f10e0d55170-db.gz); db count is now 3
+1681.786 (1) 1372087544: this set includes files; fileset count is now 3
+1681.787 (1) 1372087544: this backup set remains non-empty; will retain in history
+1681.787 (1) Retain: saving new backup history (sets now: 3) and finishing retain operation
+1681.790 (1) Resume backup (ac7e3c82a793, 1): finish run
+1681.791 (1) There were errors in the uploads, so the 'resume' event is remaining scheduled
+1681.793 (1) The backup has not finished; a resumption is scheduled within 5 minutes

@@ -152,17 +152,35 @@ function EventView(element, calendar) {
 				}
 				
 				var item = item_template.clone();
+
+				if(ev.gcal || ev.url==''){
+					item
+						.find('.fc-event-list-title').parent()
+						.empty()
+						.append( $('<span></span>').addClass('fc-event-list-title').html(ev.title) )
+					;
+				}else if(ev.direct_link){
+					item
+						.find('.fc-event-list-title').html(ev.title).end()
+						.find('a.fc-event-link')
+							.attr('href',ev.url)	
+							.end()	
+					;
+				}else{
+					item
+						.find('.fc-event-list-title').html(ev.title).end()
+						.find('a.fc-event-link')
+							.attr('target','')
+							.attr('href','javascript:void(0);')	
+							.bind('click',function(e){
+								var click_method = calendar.options.eventClick?calendar.options.eventClick:fc_click;
+								click_method(ev,e,t);
+							})
+							.end()	
+					;
+				}
+
 				item
-					.find('.fc-event-list-title').html(ev.title).end()
-					.find('a.fc-event-link')
-						//.attr('href',ev.url)
-						.attr('target','')
-						.attr('href','javascript:void(0);')	
-						.bind('click',function(e){
-							var click_method = calendar.options.eventClick?calendar.options.eventClick:fc_click;
-							click_method(ev,e,t);
-						})
-						.end()	
 					.find('.fc-event-list-description').html(ev.description).end()
 				;
 
@@ -216,14 +234,21 @@ function EventView(element, calendar) {
 							item.find('.taxonomy-'+t.taxonomy).parent().append( '<span class="rhc-event-list tax-term-divider"></span>' );
 						}
 												
-						if( item.find('.taxonomy-'+t.taxonomy).length>0 ){
-							$('<a>'+ t.name +'</a>')
-								.attr('href',t.url)
-								.appendTo( item.find('.taxonomy-'+t.taxonomy).show().parent().removeClass('rhc_event-empty-taxonomy') )
-							;		
+						if( t.name && ''!=t.name && item.find('.taxonomy-'+t.taxonomy).length>0 ){
+							if( t.url=='' ){
+								$('<span>'+ t.name +'</span>')
+									.appendTo( item.find('.taxonomy-'+t.taxonomy).show().parent().removeClass('rhc_event-empty-taxonomy') )
+								;	
+							}else{
+								$('<a>'+ t.name +'</a>')
+									.attr('href',t.url)
+									.appendTo( item.find('.taxonomy-'+t.taxonomy).show().parent().removeClass('rhc_event-empty-taxonomy') )
+								;								
+							}
+	
 						}
 						
-						if( item.find('.taxonomy-'+t.taxonomy+'-gaddress').length>0 && t.gaddress!=''){
+						if( item.find('.taxonomy-'+t.taxonomy+'-gaddress').length>0 && t.gaddress && t.gaddress!=''){
 							if( item.find('.taxonomy-'+t.taxonomy+'-gaddress' ).parent().find('a').length>0 ){
 								item.find('.taxonomy-'+t.taxonomy+'-gaddress' ).parent().append( '<span class="rhc-event-list tax-term-divider"></span>' );
 							}							

@@ -361,6 +361,7 @@ class pop_input {
 		);
 		
 		//foreach($o->options)
+		$str = "";
 		$str .= "<div class=\"pop-onoff-control\">";
 		$id = $this->get_el_id($tab,$i,$o);
 		$str .= sprintf('<input type="hidden" id="%s" name="%s" value="%s" %s />',
