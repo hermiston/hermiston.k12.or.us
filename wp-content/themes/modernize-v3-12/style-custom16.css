@@ -1,4 +1,4 @@
-html{ background-image: url(http://it.hermiston.k12.or.us/kris/wp-content/themes/modernize-v3-12/images/pattern/pattern-1.png); } 
+html{ background-image: url(http://it.hermiston.k12.or.us/kris/wp-content/themes/modernize-v3-12/images/pattern/pattern-4.png); } 
 html{ background-color: #dddddd; } 
 .logo-wrapper{ padding-top: 35px; padding-left: 0px; padding-bottom: 26px; } 
 .social-wrapper{ margin-top: 33px; } 
@@ -22,19 +22,19 @@ h1.stunning-text-title{ color: #333333; }
 .stunning-text-caption{ color: #666666; } 
 .stunning-text-button{ color: #ffffff !important; background-color: #ef7f2c !important; border: 1px solid #ef7f2c !important; } 
 body{ color: #666666 !important; } 
-a{ color: #ef7f2c; } 
-a:hover{ color: #ef7f2c; } 
-.gdl-link-title{ color: #ef7f2c !important; } 
+a{ color: #800000; } 
+a:hover{ color: #800000; } 
+.gdl-link-title{ color: #800000 !important; } 
 .gdl-slider-title{ color: #ef7f2c !important; } 
 .gdl-slider-caption, .nivo-caption{ color: #ffffff !important; } 
 div.slider-bottom-gimmick{ background-color: #ebebeb; } 
 .ls-modernize .ls-nav-prev, .ls-modernize .ls-nav-next{ background-color: #ef7f2c; } 
-h2.column-service-title{ color: #ef7f2c !important; } 
-.port-title-color, .port-title-color a{ color: #ef7f2c !important; } 
-.port-title-color a:hover{ color: #ef7f2c !important; } 
+h2.column-service-title{ color: #800000 !important; } 
+.port-title-color, .port-title-color a{ color: #800000 !important; } 
+.port-title-color a:hover{ color: #800000 !important; } 
 .post-title-color{ color: #646464 !important; } 
 .post-title-color a:hover{ color: #646464 !important; } 
-.post-widget-title-color{ color: #ef7f2c !important; } 
+.post-widget-title-color{ color: #800000 !important; } 
 .post-info-color, div.custom-sidebar #twitter_update_list{ color: #797979 !important; } 
 div.pagination a{ background-color: #f9f9f9; } 
 .about-author-wrapper{ background-color: #f9f9f9 !important; } 
@@ -46,11 +46,11 @@ table th{ color: #666666; background-color: #f7f7f7; }
 table, table tr, table tr td, table tr th{ border-color: #e5e5e5; } 
 .top-navigation-wrapper, .top-navigation-left li a{ color: #e7e7e7 !important; background-color: #494949 !important; } 
 .top-navigation-left li a{ border-right: 1px solid #a2a2a2 !important; } 
-.top-navigation-wrapper-gimmick{ background-color: #e77927 !important; } 
+.top-navigation-wrapper-gimmick{ background-color: #800000 !important; } 
 div.navigation-wrapper{ background: url(http://it.hermiston.k12.or.us/kris/wp-content/themes/modernize-v3-12/images/gradient-top-gray-40px.png) repeat-x;; } 
 .navigation-wrapper{ border-top: 1px solid #ececec !important; border-bottom: 1px solid #ececec !important; -moz-box-shadow: 0px 1px 5px -1px #f5f5f5; -webkit-box-shadow: 0px 1px 5px -1px #f5f5f5; box-shadow: 0px 1px 5px -1px #f5f5f5; } 
 .navigation-wrapper .sf-menu ul, .navigation-wrapper .sf-menu ul li{ border-color: #ececec !important; } 
-.navigation-wrapper{ background-color: #fdfdfd !important; } 
+.navigation-wrapper{ background-color: #ffffff !important; } 
 .sf-menu li li{ background-color: #fdfdfd !important; } 
 .navigation-wrapper .sf-menu li a{ color: #7a7a7a !important; border-right: 1px solid #dbdbdb !important; border-left: 1px solid #ffffff !important; } 
 .navigation-wrapper .sf-menu ul a, .navigation-wrapper .sf-menu ul .current-menu-ancestor ul a, .navigation-wrapper .sf-menu ul .current-menu-item ul a, .navigation-wrapper .sf-menu .current-menu-ancestor ul a, .navigation-wrapper .sf-menu .current-menu-item ul a{ color: #7a7a7a !important; } 
@@ -77,8 +77,8 @@ div.personnel-item .personnel-thumbnail{ border-color: #ef7f2c; }
 div.personnel-item .personnel-content{ color: #838383; } 
 div.personnal-widget-item .personnal-widget-info{ color: #4a4a4a; } 
 .sidebar-title-color{ color: #494949 !important; } 
-.footer-wrapper a{ color: #ef7f2c !important; } 
-.footer-wrapper a:hover{ color: #ef7f2c !important; } 
+.footer-wrapper a{ color: #800000 !important; } 
+.footer-wrapper a:hover{ color: #800000 !important; } 
 .footer-widget-wrapper .custom-sidebar-title{ color: #ececec !important; } 
 .footer-container-wrapper{ background-color: #313131 !important; } 
 div.footer-container-wrapper{ border-top: 3px solid #cfcfcf; } 
