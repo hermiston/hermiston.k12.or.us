@@ -16,7 +16,7 @@
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
+	
 	
 	<?php global $gdl_is_responsive ?>
 	<?php if( $gdl_is_responsive ){ ?>
@@ -52,6 +52,9 @@
 		
 	<?php wp_head(); ?>
 	
+
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
+	
 	<!-- FB Thumbnail
    ================================================== -->
 	<?php
@@ -60,14 +63,36 @@
 		if( !empty($thumbnail_id) ){
 			$thumbnail = wp_get_attachment_image_src( $thumbnail_id , '150x150' );
 			echo '<link rel="image_src" href="' . $thumbnail[0] . '" />';
+			echo '<meta property="og:image" content="' . $thumbnail[0] . '" />';
+
 		}
+		// OpenGraph meta tags
+	?>
+		
+		<meta property="og:url" content="<?php echo get_permalink( $post->ID ); ?>"/>
+		<meta property="og:title" content="<?php echo get_the_title( $post->ID ); ?>" />
+		<meta property="og:description" content="<?php echo strip_tags( get_the_excerpt( $post->ID ) ); ?>" />
+		<meta property="og:type" content="article" />
+	
+	<?php
 	} else{
 		$thumbnail_id = get_post_thumbnail_id();
 		if( !empty($thumbnail_id) ){
 			$thumbnail = wp_get_attachment_image_src( $thumbnail_id , '150x150' );
-			echo '<link rel="image_src" href="' . $thumbnail[0] . '" />';		
+			echo '<link rel="image_src" href="' . $thumbnail[0] . '" />';
+			echo '<meta property="og:image" content="' . $thumbnail[0] . '" />';
 		}
+	?>
+		
+		<meta property="og:site_name" content="<?php echo bloginfo('name'); ?>" />
+		<meta property="og:description" content="<?php echo bloginfo('description'); ?>" />
+		<meta property="og:type" content="website" />
+		
+	
+	<?php
 	}
+
+
 	?>	
 </head>
 <body <?php echo body_class(); ?>>
@@ -150,44 +175,6 @@
 									
 								}
 							?>	
-							<div class="social-icon-wrapper">
-								<?php
-									global $gdl_icon_type;
-									$gdl_social_icon = array(
-										'delicious'=> array('name'=>THEME_SHORT_NAME.'_delicious', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/delicious.png', 'icon_name' => 'icon-delicious'),
-										'deviantart'=> array('name'=>THEME_SHORT_NAME.'_deviantart', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/deviantart.png', 'icon_name' => 'icon-deviantart'),
-										'digg'=> array('name'=>THEME_SHORT_NAME.'_digg', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/digg.png', 'icon_name' => 'icon-digg'),
-										'facebook' => array('name'=>THEME_SHORT_NAME.'_facebook', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/facebook.png', 'icon_name' => 'icon-facebook'),
-										'flickr' => array('name'=>THEME_SHORT_NAME.'_flickr', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/flickr.png', 'icon_name' => 'icon-flickr'),
-										'lastfm'=> array('name'=>THEME_SHORT_NAME.'_lastfm', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/lastfm.png', 'icon_name' => 'icon-lastfm'),
-										'linkedin' => array('name'=>THEME_SHORT_NAME.'_linkedin', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/linkedin.png', 'icon_name' => 'icon-linkedin'),
-										'picasa'=> array('name'=>THEME_SHORT_NAME.'_picasa', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/picasa.png', 'icon_name' => 'icon-picasa'),
-										'rss'=> array('name'=>THEME_SHORT_NAME.'_rss', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/rss.png', 'icon_name' => 'icon-rss'),
-										'stumble-upon'=> array('name'=>THEME_SHORT_NAME.'_stumble_upon', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/stumble-upon.png', 'icon_name' => 'icon-stumbleupon'),
-										'tumblr'=> array('name'=>THEME_SHORT_NAME.'_tumblr', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/tumblr.png', 'icon_name' => 'icon-tumblr'),
-										'twitter' => array('name'=>THEME_SHORT_NAME.'_twitter', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/twitter.png', 'icon_name' => 'icon-twitter'),
-										'vimeo' => array('name'=>THEME_SHORT_NAME.'_vimeo', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/vimeo.png', 'icon_name' => 'icon-vimeo'),
-										'youtube' => array('name'=>THEME_SHORT_NAME.'_youtube', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/youtube.png', 'icon_name' => 'icon-youtube'),
-										'google_plus' => array('name'=>THEME_SHORT_NAME.'_google_plus', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/google-plus.png', 'icon_name' => 'icon-googleplus'),
-										'email' => array('name'=>THEME_SHORT_NAME.'_email', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/email.png', 'icon_name' => 'icon-envelope'),
-										'pinterest' => array('name'=>THEME_SHORT_NAME.'_pinterest', 'url'=> GOODLAYERS_PATH.'/images/icon/' . $gdl_icon_type . '/social/pinterest.png', 'icon_name' => 'icon-pinterest')
-										);
-									
-									foreach( $gdl_social_icon as $social_name => $social_icon ){
-									
-										$social_link = get_option($social_icon['name']);
-										if( !empty($social_link) ){
-										
-											echo '<div class="social-icon"><a target="_blank" href="' . $social_link . '">' ;
-											//echo '<img src="' . $social_icon['url'] . '" alt="' . $social_name . '"/>';
-											echo '<i class="' . $social_icon['icon_name'] . ' icon-2x icon-border pull-left icon-red"></i>';
-											echo '</a></div>';
-										
-										}
-										
-									}
-								?>
-							</div>
 						</div>
 					</div>
 					<div class="clear"></div>
@@ -213,7 +200,28 @@
 					<?php if(get_option(THEME_SHORT_NAME.'_enable_top_search','enable') == 'enable'){?>
 					<div class="search-wrapper"><?php get_search_form(); ?></div> 
 					<?php } ?>
-					
+					<?php
+						global $gdl_icon_type;
+						$gdl_stylesheet_uri = get_stylesheet_directory_uri();
+						$gdl_social_icon = array(
+							'facebook' => array('name'=>THEME_SHORT_NAME.'_facebook', 'url'=> $gdl_stylesheet_uri.'/images/icon/' . $gdl_icon_type . '/social/icon-facebook.png'),
+							'rss'=> array('name'=>THEME_SHORT_NAME.'_rss', 'url'=> $gdl_stylesheet_uri.'/images/icon/' . $gdl_icon_type . '/social/icon-rss.png'),
+							'email' => array('name'=>THEME_SHORT_NAME.'_email', 'url'=> $gdl_stylesheet_uri.'/images/icon/' . $gdl_icon_type . '/social/icon-mail.png')
+							);
+						
+						foreach( $gdl_social_icon as $social_name => $social_icon ){
+						
+							$social_link = get_option($social_icon['name']);
+							if( !empty($social_link) ){
+							
+								echo '<div class="top-navigation-float-right"><a target="_blank" href="' . $social_link . '">' ;
+								echo '<img src="' . $social_icon['url'] . '" alt="' . $social_name . '" width="40" height="40">';
+								echo '</a></div>';
+							
+							}
+							
+						}
+					?>
 					<div class="clear"></div>
 				</div> <!-- navigation-container-wrapper -->
 			</div> <!-- navigation-wrapper -->

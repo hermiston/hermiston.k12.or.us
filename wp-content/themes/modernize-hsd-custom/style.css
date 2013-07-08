@@ -11,3 +11,17 @@ License URI:
 */
 
 @import url(../modernize-v3-13/style.css);
+
+/* Make social icons float to the right */
+div.top-navigation-float-right{ float: right; margin-right: 6px;}
+/* Fix padding issue forcing menubar to 41px */
+.sf-menu li { padding: 8px 0px 8px 0px; }
+/* Fix padding issue forcing menubar to 41px */
+div.search-wrapper form { margin: 0px; padding: 9px 0px 8px 0px; }
+
+div.column-service-content { font-size: 13px; }
+div.column-service-image { width: 42px; height: 42px; padding: 0px 0px; }
+
+.gdl-tabs-content .network-recent-posts-widget { border-color: #ececec; }
+
+.personnal-widget-thumbnail img { border: 5px ridge #ececec; box-shadow: 2px 2px 3px #aaaaaa; }
